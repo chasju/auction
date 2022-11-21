@@ -27,15 +27,51 @@
     <title>Login | find.no</title>
   </head>
   <body class="w-100">
-    <nav class="w-100">
-      <div class="logo d-flex justify-content-center mt-5">
-        <a href="/index.html">
-          <i class="fa-solid fa-gavel text-secondary fs-1"></i>
-        </a>
+    <nav
+      class="navbar navbar-expand justify-content-center justify-content-md-start"
+      aria-label="Second navbar example"
+    >
+      <div class="container justify-content-center">
+        <div class="logo d-flex d-md-none mt-5">
+          <a href="/index.html">
+            <i class="fa-solid fa-gavel text-secondary fs-1"></i>
+          </a>
+        </div>
+        <div class="container-fluid d-none d-md-flex mt-2">
+          <div class="w-25" style="max-width: 150px">
+            <a class="navbar-brand" href="/index.html"
+              ><img
+                src="/images/logo-findDotNo.png"
+                alt="Find.no logo"
+                class="img-fluid"
+            /></a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarsExample02">
+            <div class="login register ms-auto px-4 d-flex gap-5">
+              <div
+                class="d-flex gap-2 justify-content-center align-items-center"
+              >
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <a href="/login/index.html" class="text-decoration-none"
+                  ><p class="fw-bold fst-italic text-success d-inline">
+                    Login
+                  </p></a
+                >
+              </div>
+              <div>
+                <a href="/register/index.html" class="text-decoration-none"
+                  ><p class="fw-bold fst-italic text-success d-inline">
+                    Register
+                  </p></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
-    <main class="w-100">
-      <article>
+    <main class="w-100 pt-md-5">
+      <article class="m-auto" style="max-width: 450px">
         <section>
           <div class="w-25 m-auto mt-7 ratio ratio-1x1">
             <img
@@ -50,8 +86,8 @@
             <h2 class="fw-light text-primary">Charlie</h2>
           </div>
         </section>
-        <section class="w-100 p-4 mt-4">
-          <form action="submit" class="d-flex flex-column">
+        <section class="w-100 p-4 m-auto mt-4 container-sm row">
+          <form action="submit" class="d-flex flex-column m-auto">
             <div class="form-floating">
               <input
                 type="email"
