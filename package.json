@@ -1,0 +1,52 @@
+{
+  "name": "auction",
+  "description": "Noroff Semester Project 2",
+  "type": "module",
+  "version": "0.0.8",
+  "main": "src/index.js",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.4",
+    "eslint": "^8.28.0",
+    "eslint-plugin-jest": "^27.1.5",
+    "husky": "^8.0.2",
+    "jest": "^29.2.0",
+    "lint-staged": "^13.0.3",
+    "live-server": "^1.2.2",
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0"
+  },
+  "scripts": {
+    "watch": "sass --watch src/scss:dist/css & live-server",
+    "format": "prettier -w src/**/*",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "prepare": "husky install",
+    "test": "npm run test-unit",
+    "test-unit": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chasju/auction.git"
+  },
+  "keywords": [],
+  "author": "Charlotte <charlotte.sjusdal@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chasju/auction/issues"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  },
+  "homepage": "https://github.com/chasju/auction#readme",
+  "lint-staged": {
+    "*.src/**/*": "prettier --write",
+    "*.js": "eslint --cache --fix",
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
+  }
+}
