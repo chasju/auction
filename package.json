@@ -2,7 +2,7 @@
   "name": "auction",
   "description": "Noroff Semester Project 2",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "src/index.js",
   "devDependencies": {
     "live-server": "^1.2.2",
