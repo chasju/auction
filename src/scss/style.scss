@@ -3,3 +3,10 @@
 
 // Bootstrap Styles
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// CSS overrides
+.form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $primary;
+}
