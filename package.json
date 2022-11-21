@@ -1,7 +1,7 @@
 {
   "name": "auction",
   "description": "Noroff Semester Project 2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "devDependencies": {
     "sass": "^1.56.1"
