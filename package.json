@@ -1,9 +1,11 @@
 {
-  "name": "Auction Website",
+  "name": "auction",
   "description": "Noroff Semester Project 2",
   "version": "0.0.1",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "sass": "^1.56.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
