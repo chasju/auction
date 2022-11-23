@@ -11476,10 +11476,42 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.form-control {
+.form-control-auth {
   border: none;
   border-radius: 0;
   border-bottom: 1px solid #3f7884;
+}
+
+.form-control:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #3f7884;
+}
+
+.hamburger {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.first-dot,
+.second-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #252525;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.first-dot::before,
+.second-dot::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #252525;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(20px);
 }
 
 /*# sourceMappingURL=style.css.map */
