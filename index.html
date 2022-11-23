@@ -100,7 +100,10 @@
       </div>
     </nav>
     <main class="w-100 pt-md-5">
-      <div class="w-75 m-auto mt-6 search-bar shadow-lg rounded-3">
+      <div
+        class="w-75 m-auto mt-6 search-bar shadow-lg rounded-3"
+        style="max-width: 500px"
+      >
         <form role="search" id="searchForm" type="submit">
           <div class="input-group">
             <input
@@ -116,33 +119,65 @@
           </div>
         </form>
       </div>
-      <article class="m-auto" style="max-width: 450px">
-        <div class="px-5 mt-6">
-          <h1 class="fw-bolder">NEW LISTINGS</h1>
-        </div>
-        <div class="w-100 my-5">
-          <section class="shadow-lg rounded-4 mb-6" style="max-width: 475px">
-            <div>
-              <h2 class="px-4 pt-5 fst-italic fw-semibold">Giraffe painting</h2>
-            </div>
-            <div class="ratio ratio-16x9 mt-3">
-              <img
-                src="/images/pexels-antony-trivet-6057741.jpg"
-                alt=""
-                class="img-fluid"
-              />
-            </div>
-            <div>
-              <div class="px-4 mt-3 d-flex justify-content-end gap-2">
-                <span><i class="fa-regular fa-clock"></i></span>
-                <div>1d 2hr 4m</div>
+      <article class="w-100 m-auto" style="max-width: 1100px">
+        <div class="m-auto">
+          <div class="px-5 mt-6">
+            <h1 class="fw-bolder">NEW LISTINGS</h1>
+          </div>
+          <div
+            class="w-100 my-5 d-lg-flex flex-lg-wrap justify-content-between"
+          >
+            <section
+              class="shadow-lg rounded-4 m-auto mb-6"
+              style="max-width: 475px"
+            >
+              <div>
+                <a href="/listing/index.html" class="text-decoration-none">
+                  <h2 class="px-4 pt-5 fst-italic fw-semibold">
+                    Giraffe painting
+                  </h2>
+                </a>
               </div>
-              <div class="px-4 mt-5">
-                <p>Description of painting, it’s a description of painting.</p>
+              <div class="ratio ratio-16x9 mt-3">
+                <img
+                  src="/images/pexels-antony-trivet-6057741.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
               </div>
-              <div class="px-4 mt-5 d-flex justify-content-between">
-                <p class="fw-semibold">Current bid</p>
-                <div class="d-flex gap-2">
+              <div>
+                <div class="px-4 mt-3 d-flex justify-content-end gap-2">
+                  <span><i class="fa-regular fa-clock"></i></span>
+                  <div>1d 2hr 4m</div>
+                </div>
+                <div class="px-4 mt-5">
+                  <p>
+                    Description of painting, it’s a description of painting.
+                  </p>
+                </div>
+                <div class="px-4 mt-5 d-flex justify-content-between">
+                  <p class="fw-semibold">Current bid</p>
+                  <div class="d-flex gap-2">
+                    <div
+                      class="ratio ratio-1x1"
+                      style="width: 25px; height: 25px"
+                    >
+                      <img
+                        src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg"
+                        alt="profile"
+                        class="rounded-circle"
+                        style="object-fit: cover"
+                      />
+                    </div>
+                    <div class="cookies d-flex align-items-baseline gap-1">
+                      <i class="fa-solid fa-cookie-bite"></i>
+                      <p class="mb-0">200</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="px-4 d-flex gap-2 justify-content-end align-items-center"
+                >
                   <div
                     class="ratio ratio-1x1"
                     style="width: 25px; height: 25px"
@@ -156,77 +191,92 @@
                   </div>
                   <div class="cookies d-flex align-items-baseline gap-1">
                     <i class="fa-solid fa-cookie-bite"></i>
-                    <p class="mb-0">1000</p>
+                    <input
+                      type="number"
+                      name="bid"
+                      id="bidInput"
+                      placeholder="0"
+                      style="width: 60px"
+                      class="text-end px-2 py-1"
+                    />
+                  </div>
+                </div>
+                <div class="px-4">
+                  <button
+                    class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center"
+                  >
+                    Place bid
+                  </button>
+                </div>
+                <div class="px-4 py-4 d-flex gap-2 justify-content-end">
+                  <a href="/profile/user/index.html">
+                    <p class="fst-italic">See all of Connie's listings >></p>
+                  </a>
+                  <div
+                    class="ratio ratio-1x1"
+                    style="width: 25px; height: 25px"
+                  >
+                    <img
+                      src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg"
+                      alt="profile"
+                      class="rounded-circle"
+                      style="object-fit: cover"
+                    />
                   </div>
                 </div>
               </div>
-              <div
-                class="px-4 d-flex gap-2 justify-content-end align-items-center"
-              >
-                <div class="ratio ratio-1x1" style="width: 25px; height: 25px">
-                  <img
-                    src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg"
-                    alt="profile"
-                    class="rounded-circle"
-                    style="object-fit: cover"
-                  />
-                </div>
-                <div class="cookies d-flex align-items-baseline gap-1">
-                  <i class="fa-solid fa-cookie-bite"></i>
-                  <input
-                    type="number"
-                    name="bid"
-                    id="bidInput"
-                    placeholder="0"
-                    style="width: 60px"
-                    class="text-end px-2 py-1"
-                  />
-                </div>
-              </div>
-              <div class="px-4">
-                <button
-                  class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center"
-                >
-                  Place bid
-                </button>
-              </div>
-              <div class="px-4 py-4 d-flex gap-2 justify-content-end">
-                <a href="/profile/user/index.html">
-                  <p class="fst-italic">See all of Connie's listings >></p>
+            </section>
+            <section
+              class="shadow-lg rounded-4 m-auto mb-6"
+              style="max-width: 475px"
+            >
+              <div>
+                <a href="/listing/index.html" class="text-decoration-none">
+                  <h2 class="px-4 pt-5 fst-italic fw-semibold">
+                    Giraffe painting
+                  </h2>
                 </a>
-                <div class="ratio ratio-1x1" style="width: 25px; height: 25px">
-                  <img
-                    src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg"
-                    alt="profile"
-                    class="rounded-circle"
-                    style="object-fit: cover"
-                  />
+              </div>
+              <div class="ratio ratio-16x9 mt-3">
+                <img
+                  src="/images/pexels-antony-trivet-6057741.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div>
+                <div class="px-4 mt-3 d-flex justify-content-end gap-2">
+                  <span><i class="fa-regular fa-clock"></i></span>
+                  <div>1d 2hr 4m</div>
                 </div>
-              </div>
-            </div>
-          </section>
-          <section class="shadow-lg rounded-4 mb-6" style="max-width: 475px">
-            <div>
-              <h2 class="px-4 pt-5 fst-italic fw-semibold">Giraffe painting</h2>
-            </div>
-            <div class="ratio ratio-16x9 mt-3">
-              <img
-                src="/images/pexels-antony-trivet-6057741.jpg"
-                alt=""
-                class="img-fluid"
-              />
-            </div>
-            <div>
-              <div class="px-4 mt-3 d-flex justify-content-end gap-2">
-                <span><i class="fa-regular fa-clock"></i></span>
-                <div>1d 2hr 4m</div>
-              </div>
-              <div class="px-4 mt-5">
-                <p>Description of painting, it’s a description of painting.</p>
-              </div>
-              <div class="px-4 mt-5 d-flex justify-content-between">
-                <p class="fw-semibold">Current bid</p>
-                <div class="d-flex gap-2">
+                <div class="px-4 mt-5">
+                  <p>
+                    Description of painting, it’s a description of painting.
+                  </p>
+                </div>
+                <div class="px-4 mt-5 d-flex justify-content-between">
+                  <p class="fw-semibold">Current bid</p>
+                  <div class="d-flex gap-2">
+                    <div
+                      class="ratio ratio-1x1"
+                      style="width: 25px; height: 25px"
+                    >
+                      <img
+                        src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg"
+                        alt="profile"
+                        class="rounded-circle"
+                        style="object-fit: cover"
+                      />
+                    </div>
+                    <div class="cookies d-flex align-items-baseline gap-1">
+                      <i class="fa-solid fa-cookie-bite"></i>
+                      <p class="mb-0">350</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="px-4 d-flex gap-2 justify-content-end align-items-center"
+                >
                   <div
                     class="ratio ratio-1x1"
                     style="width: 25px; height: 25px"
@@ -240,55 +290,141 @@
                   </div>
                   <div class="cookies d-flex align-items-baseline gap-1">
                     <i class="fa-solid fa-cookie-bite"></i>
-                    <p class="mb-0">1000</p>
+                    <input
+                      type="number"
+                      name="bid"
+                      id="bidInput"
+                      placeholder="0"
+                      style="width: 60px"
+                      class="text-end px-2 py-1"
+                    />
+                  </div>
+                </div>
+                <div class="px-4">
+                  <button
+                    class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center"
+                  >
+                    Place bid
+                  </button>
+                </div>
+                <div class="px-4 py-4 d-flex gap-2 justify-content-end">
+                  <a href="/profile/user/index.html">
+                    <p class="fst-italic">See all of Connie's listings >></p>
+                  </a>
+                  <div
+                    class="ratio ratio-1x1"
+                    style="width: 25px; height: 25px"
+                  >
+                    <img
+                      src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg"
+                      alt="profile"
+                      class="rounded-circle"
+                      style="object-fit: cover"
+                    />
                   </div>
                 </div>
               </div>
-              <div
-                class="px-4 d-flex gap-2 justify-content-end align-items-center"
-              >
-                <div class="ratio ratio-1x1" style="width: 25px; height: 25px">
-                  <img
-                    src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg"
-                    alt="profile"
-                    class="rounded-circle"
-                    style="object-fit: cover"
-                  />
-                </div>
-                <div class="cookies d-flex align-items-baseline gap-1">
-                  <i class="fa-solid fa-cookie-bite"></i>
-                  <input
-                    type="number"
-                    name="bid"
-                    id="bidInput"
-                    placeholder="0"
-                    style="width: 60px"
-                    class="text-end px-2 py-1"
-                  />
-                </div>
-              </div>
-              <div class="px-4">
-                <button
-                  class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center"
-                >
-                  Place bid
-                </button>
-              </div>
-              <div class="px-4 py-4 d-flex gap-2 justify-content-end">
-                <a href="/profile/user/index.html">
-                  <p class="fst-italic">See all of Connie's listings >></p>
+            </section>
+            <section
+              class="shadow-lg rounded-4 m-auto mb-6"
+              style="max-width: 475px"
+            >
+              <div>
+                <a href="/listing/index.html" class="text-decoration-none">
+                  <h2 class="px-4 pt-5 fst-italic fw-semibold">
+                    Giraffe painting
+                  </h2>
                 </a>
-                <div class="ratio ratio-1x1" style="width: 25px; height: 25px">
-                  <img
-                    src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg"
-                    alt="profile"
-                    class="rounded-circle"
-                    style="object-fit: cover"
-                  />
+              </div>
+              <div class="ratio ratio-16x9 mt-3">
+                <img
+                  src="/images/pexels-antony-trivet-6057741.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div>
+                <div class="px-4 mt-3 d-flex justify-content-end gap-2">
+                  <span><i class="fa-regular fa-clock"></i></span>
+                  <div>1d 2hr 4m</div>
+                </div>
+                <div class="px-4 mt-5">
+                  <p>
+                    Description of painting, it’s a description of painting.
+                  </p>
+                </div>
+                <div class="px-4 mt-5 d-flex justify-content-between">
+                  <p class="fw-semibold">Current bid</p>
+                  <div class="d-flex gap-2">
+                    <div
+                      class="ratio ratio-1x1"
+                      style="width: 25px; height: 25px"
+                    >
+                      <img
+                        src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg"
+                        alt="profile"
+                        class="rounded-circle"
+                        style="object-fit: cover"
+                      />
+                    </div>
+                    <div class="cookies d-flex align-items-baseline gap-1">
+                      <i class="fa-solid fa-cookie-bite"></i>
+                      <p class="mb-0">1000</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="px-4 d-flex gap-2 justify-content-end align-items-center"
+                >
+                  <div
+                    class="ratio ratio-1x1"
+                    style="width: 25px; height: 25px"
+                  >
+                    <img
+                      src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg"
+                      alt="profile"
+                      class="rounded-circle"
+                      style="object-fit: cover"
+                    />
+                  </div>
+                  <div class="cookies d-flex align-items-baseline gap-1">
+                    <i class="fa-solid fa-cookie-bite"></i>
+                    <input
+                      type="number"
+                      name="bid"
+                      id="bidInput"
+                      placeholder="0"
+                      style="width: 60px"
+                      class="text-end px-2 py-1"
+                    />
+                  </div>
+                </div>
+                <div class="px-4">
+                  <button
+                    class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center"
+                  >
+                    Place bid
+                  </button>
+                </div>
+                <div class="px-4 py-4 d-flex gap-2 justify-content-end">
+                  <a href="/profile/user/index.html">
+                    <p class="fst-italic">See all of Connie's listings >></p>
+                  </a>
+                  <div
+                    class="ratio ratio-1x1"
+                    style="width: 25px; height: 25px"
+                  >
+                    <img
+                      src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg"
+                      alt="profile"
+                      class="rounded-circle"
+                      style="object-fit: cover"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       </article>
     </main>
