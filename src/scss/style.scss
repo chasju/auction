@@ -5,8 +5,42 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // CSS overrides
-.form-control {
+.form-control-auth {
   border: none;
   border-radius: 0;
   border-bottom: 1px solid $primary;
+}
+
+.form-control:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $primary;
+}
+
+// Hamburger menu
+
+.hamburger {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.first-dot,
+.second-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #252525;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.first-dot::before,
+.second-dot::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #252525;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(20px);
 }
