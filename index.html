@@ -19,7 +19,52 @@
       <div class="container justify-content-center">
         <div class="w-100 logo d-flex flex-column d-md-none mt-5 px-3">
           <a href="/index.html" class="align-self-center"><i class="fa-solid fa-gavel text-secondary fs-1"></i> </a>
-          <div class="d-flex">
+          <div class="d-flex position-relative">
+            <div id="menu" class="d-none position-absolute end-5 top-0" style="z-index: 1; width: calc(100% + 2px)">
+              <section class="bg-body shadow-lg rounded-1 m-auto pb-7">
+                <div class="menu-nav d-flex">
+                  <div class="d-none p-2">
+                    <div class="m-auto ratio ratio-1x1" style="width: 50px">
+                      <img src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
+                    </div>
+                    <div class="cookies d-flex align-items-baseline gap-1">
+                      <i class="fa-solid fa-cookie"></i>
+                      <p class="mb-0">1000</p>
+                    </div>
+                  </div>
+                  <div id="hamburger" class="hamburger d-flex gap-2 ms-auto p-2" style="height: 50px">
+                    <div class="first-dot"></div>
+                    <div class="second-dot"></div>
+                  </div>
+                </div>
+                <div class="w-75 m-auto p-3 mt-6 d-flex flex-wrap gap-4 justify-content-center align-items-center" style="max-width: 250px">
+                  <a href="/login/index.html" class="text-decoration-none text-success">
+                    <div class="p-3 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
+                      <i class="fa-solid fa-right-to-bracket fs-7"></i>
+                      <p class="mb-0 mt-2 fst-italic fw-semibold">Login</p>
+                    </div>
+                  </a>
+                  <a href="/login/index.html" class="text-decoration-none text-success">
+                    <div class="p-3 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
+                      <i class="fa-solid fa-user fs-7"></i>
+                      <p class="mb-0 mt-2 fst-italic fw-semibold">Profile</p>
+                    </div>
+                  </a>
+                  <a href="/login/index.html" class="text-decoration-none text-success">
+                    <div class="p-3 4 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
+                      <i class="fa-solid fa-plus fs-7"></i>
+                      <p class="mb-0 mt-2 fst-italic fw-semibold">Add</p>
+                    </div>
+                  </a>
+                  <a href="/login/index.html" class="text-decoration-none text-success">
+                    <div class="p-3 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
+                      <i class="fa-solid fa-right-from-bracket fs-7"></i>
+                      <p class="mb-0 mt-2 fst-italic fw-semibold">Logout</p>
+                    </div>
+                  </a>
+                </div>
+              </section>
+            </div>
             <div class="d-none">
               <div class="m-auto ratio ratio-1x1" style="width: 50px">
                 <img src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
@@ -39,7 +84,7 @@
           <div class="w-25" style="max-width: 150px">
             <a class="navbar-brand" href="/index.html"><img src="/images/logo-findDotNo.png" alt="Find.no logo" class="img-fluid" /></a>
           </div>
-          <div class="collapse navbar-collapse" id="navbarsExample02">
+          <div class="d-flex flex-grow-1 align-items-center" id="not-logged-in-nav">
             <div class="login register ms-auto px-4 d-flex gap-5">
               <div class="d-flex gap-2 justify-content-center align-items-center">
                 <i class="fa-solid fa-right-to-bracket"></i>
@@ -47,6 +92,27 @@
               </div>
               <div>
                 <a href="/register/index.html" class="text-decoration-none"><p class="fw-bold fst-italic text-success d-inline">Register</p></a>
+              </div>
+            </div>
+          </div>
+          <div class="d-none flex-grow-1 align-items-center" id="logged-in-nav">
+            <div class="login register ms-auto px-4 d-flex gap-5">
+              <div class="d-flex flex-row-reverse gap-3">
+                <div class="m-auto ratio ratio-1x1" style="width: 25px">
+                  <img src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
+                </div>
+                <div class="cookies d-flex align-items-center gap-1">
+                  <i class="fa-solid fa-cookie"></i>
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+              <div class="d-flex gap-2 justify-content-center align-items-center">
+                <i class="fa-solid fa-plus"></i>
+                <p class="fw-bold fst-italic text-success d-inline m-auto">Add listing</p>
+              </div>
+              <div class="d-flex gap-2 justify-content-center align-items-center">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <p class="fw-bold fst-italic text-success d-inline m-auto">Logout</p>
               </div>
             </div>
           </div>
@@ -68,6 +134,20 @@
             <h1 class="fw-bolder">NEW LISTINGS</h1>
           </div>
           <div class="w-100 my-5 d-lg-flex flex-lg-wrap justify-content-between">
+            <div class="w-75 m-auto px-3 d-flex justify-content-end position-relative">
+              <p class="fst-italic">Sort by</p>
+              <div class="d-none position-absolute end-0 top-35 bg-body shadow-lg rounded-3 overflow-scroll overflow-hidden" style="z-index: 1; width: 180px; height: 270px">
+                <section class="m-auto p-3 text-center text-success">
+                  <p class="fw-semibold">Tags</p>
+                  <hr />
+                  <div id="tags" class="fst-italic">
+                    <p>Giraffe</p>
+                    <p>Pencils</p>
+                    <p>Coffee</p>
+                  </div>
+                </section>
+              </div>
+            </div>
             <section class="shadow-lg rounded-4 m-auto mb-6" style="max-width: 475px">
               <div>
                 <a href="/listing/index.html" class="text-decoration-none">
