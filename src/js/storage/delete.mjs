@@ -1,3 +1,3 @@
-export const deleteKey = (key) => {
+export const deleteFromLocalStorage = (key) => {
   localStorage.removeItem(key);
 };
