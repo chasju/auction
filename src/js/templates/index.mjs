@@ -20,10 +20,19 @@ export function postTemplate(postData) {
     const { title, description, seller, bids } = postData[i];
     let media = postData[i].media[0];
     let endsAt = postData[i].endsAt;
+    let sellerImage = seller.avatar;
+    // console.log(sellerImage);
 
     // Determine media undefined
 
     let isMedia;
+    let isSellerImage;
+
+    if (sellerImage === null || sellerImage === "") {
+      isSellerImage = "https://cdn.discordapp.com/attachments/931268688412299274/1026475078847823972/Hero-Banner-Placeholder-Dark-1024x480-1.png";
+    } else {
+      isSellerImage = sellerImage;
+    }
 
     if (media !== undefined) {
       isMedia = media;
@@ -109,7 +118,7 @@ export function postTemplate(postData) {
                     <p class="fst-italic">See all of ${seller.name}'s listings >></p>
                   </a>
                   <div class="ratio ratio-1x1" style="width: 25px; height: 25px">
-                    <img src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
+                    <img src="${isSellerImage}" alt="profile" class="rounded-circle" style="object-fit: cover" />
                   </div>
                 </div>
               </div>
