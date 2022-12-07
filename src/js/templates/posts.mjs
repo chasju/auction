@@ -6,6 +6,8 @@
  * @returns The function returns the post template and is being used in the renderPostTemplate function.
  */
 
+import { formatDate } from "../components/formatDate.mjs";
+
 export function postTemplate(postData) {
   const post = document.createElement("div");
   post.classList.add("post", "w-100", "my-5", "d-lg-flex", "flex-lg-wrap", "justify-content-between");
@@ -21,7 +23,6 @@ export function postTemplate(postData) {
     let media = postData[i].media[0];
     let endsAt = postData[i].endsAt;
     let sellerImage = seller.avatar;
-    // console.log(sellerImage);
 
     // Determine media undefined
 
@@ -55,25 +56,7 @@ export function postTemplate(postData) {
 
     // Get end-date
 
-    const todaysDate = new Date().getTime();
-    const endDate = new Date(endsAt).getTime();
-    const distance = endDate - todaysDate;
-
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-    let dateToBeUsed;
-
-    dateToBeUsed = `${days}d ${hours}h ${minutes}m`;
-
-    if (minutes < 1) {
-      dateToBeUsed = "Ending Now";
-    }
-
-    if (distance <= 0) {
-      dateToBeUsed = "Ended";
-    }
+    const dateToBeUsed = formatDate(endsAt);
 
     // Post template
 
