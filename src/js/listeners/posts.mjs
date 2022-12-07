@@ -1,5 +1,5 @@
 import { getPosts } from "../api/posts/get.mjs";
-import { renderPostTemplate } from "../templates/index.mjs";
+import { renderPostTemplate } from "../templates/posts.mjs";
 
 /**
  * Function that will GET all post for Homepage.
