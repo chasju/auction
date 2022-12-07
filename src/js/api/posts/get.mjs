@@ -2,7 +2,7 @@ import { baseURL } from "../apiBase.mjs";
 import { authFetch } from "../headers.mjs";
 
 export async function getPosts() {
-  const getPostsURL = `${baseURL}/listings?_seller=true&_bids=true`;
+  const getPostsURL = `${baseURL}/listings?_seller=true&_bids=true&sort=created&sortOrder=desc`;
   const response = await authFetch(getPostsURL);
   const result = await response.json();
   return result;

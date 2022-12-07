@@ -131,19 +131,23 @@
           <section class="w-100 p-4 m-auto mt-4 container-sm row" style="max-width: 450px">
             <form action="submit" class="d-flex flex-column m-auto">
               <div class="form-floating">
-                <input type="text" class="form-control form-control-auth" id="title" placeholder="Title" required />
+                <input type="text" name="title" class="form-control form-control-auth" id="title" placeholder="Title" required />
                 <label for="title">Title</label>
               </div>
               <div class="form-floating mt-4">
-                <input type="text" class="form-control form-control-auth" id="tags" placeholder="Tags" title="Separate tags with a comma" />
+                <textarea name="description" id="description" class="form-control form-control-auth" placeholder="description" title="Write a short description" required cols="30" rows="10"></textarea>
+                <label for="description">Description</label>
+              </div>
+              <div class="form-floating mt-4">
+                <input type="text" name="tags" class="form-control form-control-auth" id="tags" placeholder="Tags" title="Separate tags with a comma" />
                 <label for="tags">Tags</label>
               </div>
               <div class="form-floating mt-4">
-                <input type="url" class="form-control form-control-auth" id="image" placeholder="Image https://img.service.com/avatar.jpg" required />
-                <label for="password">Image <span class="fs-8 fst-italic">https://img.service.com/avatar.jpg</span></label>
+                <input type="url" name="media" class="form-control form-control-auth" id="image" placeholder="Image https://img.service.com/avatar.jpg" required />
+                <label for="image">Image <span class="fs-8 fst-italic">https://img.service.com/avatar.jpg</span></label>
               </div>
               <div class="form-floating mt-4">
-                <input type="datetime-local" class="form-control form-control-auth" id="avatar" placeholder="Deadline" title="Add deadline for listing" required />
+                <input type="datetime-local" name="endsAt" class="form-control form-control-auth" id="avatar" placeholder="Deadline" title="Add deadline for listing" required />
                 <label for="avatar">Deadline</label>
               </div>
               <button class="w-50 mt-5 btn btn-lg fw-med btn-secondary align-self-center">Create</button>

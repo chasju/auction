@@ -16,6 +16,7 @@ if (path === "/login/" || path === "/login/index.html") {
 }
 if (path === "/listing/create/" || path === "/listing/create/index.html") {
   listeners.setMenuListener();
+  listeners.setCreatePostListener();
 }
 if (path === "/listing/update/" || path === "/listing/update/index.html") {
   listeners.setMenuListener();

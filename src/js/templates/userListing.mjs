@@ -13,21 +13,13 @@ export function userListingTemplate(postData) {
   postData.forEach((userPost) => {
     // Destructuring API into variables
 
-    const { title, description, seller, bids } = userPost;
+    const { title, description, bids } = userPost;
     let media = userPost.media[0];
     let endsAt = userPost.endsAt;
-    let sellerImage = seller.avatar;
 
     // Determine media undefined
 
     let isMedia;
-    let isSellerImage;
-
-    if (sellerImage === null || sellerImage === "") {
-      isSellerImage = "https://cdn.discordapp.com/attachments/931268688412299274/1026475078847823972/Hero-Banner-Placeholder-Dark-1024x480-1.png";
-    } else {
-      isSellerImage = sellerImage;
-    }
 
     if (media !== undefined) {
       isMedia = media;
