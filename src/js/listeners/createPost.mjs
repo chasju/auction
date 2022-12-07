@@ -1,9 +1,10 @@
 import { createPost } from "../api/posts/create.mjs";
+import { formatDate } from "../components/formatDate.mjs";
 
 /**
  * Function with create post listener.
  *
- * @returns Listens for a button and creates post.
+ * @returns Listens for a submit and creates post.
  *
  */
 
@@ -22,6 +23,29 @@ export async function setCreatePostListener() {
       await createPost(postData);
 
       window.location = "./../../";
+    });
+
+    // Updating preview
+
+    const title = document.querySelector("#previewTitle");
+    const description = document.querySelector("#previewDescription");
+    let image = document.querySelector("#previewImage");
+    const deadline = document.querySelector("#previewTimer");
+
+    form.addEventListener("change", (e) => {
+      e.preventDefault();
+      if (e.target.id === "title") {
+        title.textContent = e.target.value;
+      }
+      if (e.target.id === "description") {
+        description.textContent = e.target.value;
+      }
+      if (e.target.id === "image") {
+        image.src = e.target.value;
+      }
+      if (e.target.id === "deadline") {
+        deadline.textContent = formatDate(form.endsAt.value);
+      }
     });
   }
 }
