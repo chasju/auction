@@ -14,6 +14,17 @@ if (path === "/register/" || path === "/register/index.html") {
 if (path === "/login/" || path === "/login/index.html") {
   listeners.setLoginListener();
 }
+if (path === "/listing/create/" || path === "/listing/create/index.html") {
+  listeners.setMenuListener();
+}
+if (path === "/listing/update/" || path === "/listing/update/index.html") {
+  listeners.setMenuListener();
+}
+if (path === "/listing/" || path === "/listing/index.html") {
+  listeners.setMenuListener();
+  listeners.getSinglePost();
+  listeners.getBids();
+}
 
 // if (load("token") !== null || load("token") !== undefined) {
 //   console.log(`Logged in`);
