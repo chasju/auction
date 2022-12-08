@@ -20,6 +20,7 @@ if (path === "/listing/create/" || path === "/listing/create/index.html") {
 }
 if (path === "/listing/update/" || path === "/listing/update/index.html") {
   listeners.setMenuListener();
+  listeners.setUpdatePostListener();
 }
 if (path === "/listing/" || path === "/listing/index.html") {
   listeners.setMenuListener();
