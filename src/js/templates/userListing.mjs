@@ -8,26 +8,18 @@
 
 export function userListingTemplate(postData) {
   const post = document.createElement("div");
-  post.classList.add("post", "w-100", "my-5", "mx-2", "d-lg-flex", "flex-lg-wrap", "justify-content-between");
+  post.classList.add("post", "w-100", "my-5", "d-lg-flex", "flex-lg-wrap", "justify-content-between");
 
   postData.forEach((userPost) => {
     // Destructuring API into variables
 
-    const { title, description, seller, bids } = userPost;
+    const { title, description, bids } = userPost;
     let media = userPost.media[0];
     let endsAt = userPost.endsAt;
-    let sellerImage = seller.avatar;
 
     // Determine media undefined
 
     let isMedia;
-    let isSellerImage;
-
-    if (sellerImage === null || sellerImage === "") {
-      isSellerImage = "https://cdn.discordapp.com/attachments/931268688412299274/1026475078847823972/Hero-Banner-Placeholder-Dark-1024x480-1.png";
-    } else {
-      isSellerImage = sellerImage;
-    }
 
     if (media !== undefined) {
       isMedia = media;
