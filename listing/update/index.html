@@ -129,68 +129,64 @@
         </section>
         <div class="d-lg-flex flex-lg-wrap justify-content-between">
           <section class="w-100 p-4 m-auto mt-4 container-sm row" style="max-width: 450px">
-            <form action="submit" class="d-flex flex-column m-auto">
+            <form id="editPost" action="submit" class="d-flex flex-column m-auto">
               <div class="form-floating">
-                <input type="text" class="form-control form-control-auth" id="title" placeholder="Title" />
+                <input type="text" name="title" class="form-control form-control-auth" id="title" placeholder="Title" />
                 <label for="title">Title</label>
               </div>
               <div class="form-floating mt-4">
-                <input type="text" class="form-control form-control-auth" id="tags" placeholder="Tags" title="Separate tags with a comma" />
+                <textarea name="description" id="description" class="form-control form-control-auth" placeholder="description" title="Write a short description" required cols="30" rows="10"></textarea>
+                <label for="description">Description</label>
+              </div>
+              <div class="form-floating mt-4">
+                <input type="text" name="tags" class="form-control form-control-auth" id="tags" placeholder="Tags" title="Separate tags with a comma" />
                 <label for="tags">Tags</label>
               </div>
               <div class="form-floating mt-4">
-                <input type="url" class="form-control form-control-auth" id="image" placeholder="Image https://img.service.com/avatar.jpg" />
-                <label for="password">Image <span class="fs-8 fst-italic">https://img.service.com/avatar.jpg</span></label>
+                <input type="url" name="media" class="form-control form-control-auth" id="image" placeholder="Image https://img.service.com/avatar.jpg" />
+                <label for="image">Image <span class="fs-8 fst-italic">https://img.service.com/avatar.jpg</span></label>
               </div>
               <div class="form-floating mt-4">
-                <input type="datetime-local" class="form-control form-control-auth" id="avatar" placeholder="Deadline" title="Add deadline for listing" />
-                <label for="avatar">Deadline</label>
+                <input disabled name="endsAt" type="text" class="form-control form-control-auth" id="deadline" placeholder="Deadline" title="Add deadline for listing" />
+                <label for="deadline">Deadline</label>
               </div>
               <button class="w-50 mt-5 btn btn-lg fw-med btn-secondary align-self-center">Update</button>
             </form>
           </section>
-          <section class="m-auto my-5" style="max-width: 475px">
-            <h2 class="fst-italic">Preview</h2>
+          <section class="w-100 m-auto my-5" style="max-width: 475px">
+            <h2 class="fst-italic mx-3">Preview</h2>
             <div class="mt-3 shadow-lg rounded-4">
               <div>
-                <a href="/listing/index.html" class="text-decoration-none">
-                  <h2 class="px-4 pt-5 fst-italic fw-semibold">Title</h2>
-                </a>
+                <h2 id="previewTitle" class="px-4 pt-5 fst-italic fw-semibold">Title</h2>
               </div>
               <div class="ratio ratio-16x9 mt-3">
-                <img src="/images/pexels-antony-trivet-6057741.jpg" alt="" class="img-fluid" />
+                <img id="previewImage" src="/images/pexels-antony-trivet-6057741.jpg" alt="" class="img-fluid" />
               </div>
               <div>
                 <div class="px-4 mt-3 d-flex justify-content-end gap-2">
                   <span><i class="fa-regular fa-clock"></i></span>
-                  <div>1d 2hr 4m</div>
+                  <div id="previewTimer">0</div>
                 </div>
                 <div class="px-4 mt-5">
-                  <p>Description of painting, it’s a description of painting.</p>
+                  <p id="previewDescription">Description goes here</p>
                 </div>
                 <div class="px-4 mt-5 d-flex justify-content-between">
                   <p class="fw-semibold">Current bid</p>
                   <div class="d-flex gap-2">
-                    <div class="ratio ratio-1x1" style="width: 25px; height: 25px">
-                      <img src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
-                    </div>
                     <div class="cookies d-flex align-items-baseline gap-1">
                       <i class="fa-solid fa-cookie-bite"></i>
-                      <p class="mb-0">350</p>
+                      <p class="mb-0">0</p>
                     </div>
                   </div>
                 </div>
                 <div class="px-4 d-flex gap-2 justify-content-end align-items-center">
-                  <div class="ratio ratio-1x1" style="width: 25px; height: 25px">
-                    <img src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
-                  </div>
                   <div class="cookies d-flex align-items-baseline gap-1">
                     <i class="fa-solid fa-cookie-bite"></i>
                     <input type="number" name="bid" id="bidInput" placeholder="0" style="width: 60px" class="text-end px-2 py-1" />
                   </div>
                 </div>
                 <div class="px-4 pb-5">
-                  <button class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center">Place bid</button>
+                  <button disabled class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center">Place bid</button>
                 </div>
               </div>
             </div>

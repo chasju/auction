@@ -8,7 +8,7 @@
 
 export function userListingTemplate(postData) {
   const post = document.createElement("div");
-  post.classList.add("post", "w-100", "my-5", "mx-2", "d-lg-flex", "flex-lg-wrap", "justify-content-between");
+  post.classList.add("post", "w-100", "my-5", "d-lg-flex", "flex-lg-wrap", "justify-content-between");
 
   postData.forEach((userPost) => {
     // Destructuring API into variables
