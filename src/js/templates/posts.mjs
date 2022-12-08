@@ -97,7 +97,7 @@ export function postTemplate(postData) {
                     <button class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center">Place bid</button>
                   </div>
                   <div class="px-4 py-4 d-flex gap-2 justify-content-end">
-                    <a href="./profile/user/?id=${seller.name}">
+                    <a href="./profile/user/?name=${seller.name}">
                       <p class="fst-italic">See all of ${seller.name}'s listings >></p>
                     </a>
                     <div class="ratio ratio-1x1" style="width: 25px; height: 25px">
