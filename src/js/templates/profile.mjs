@@ -2,8 +2,6 @@ export function profileTemplate(postData) {
   const post = document.createElement("div");
   post.classList.add("post", "m-auto", "d-flex", "gap-3", "align-items-center");
 
-  console.log(postData);
-
   const { name, email } = postData;
   let avatar = postData.avatar;
   let credits = postData.credits;

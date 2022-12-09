@@ -1,5 +1,6 @@
 import { getUserListings, getUserProfile } from "../api/profiles/get.mjs";
 import { renderProfileTemplate } from "../templates/profile.mjs";
+import { renderProfileListingsTemplate } from "../templates/profileListings.mjs";
 
 const url = new URL(location.href);
 const userName = url.searchParams.get("name");
@@ -19,7 +20,10 @@ export async function setProfileListener() {
 export async function setProfileListingsListener() {
   try {
     const profile = await getUserListings(userName);
-    console.log(profile);
+
+    const container = document.querySelector("#listingsContainer");
+    container.innerHTML = "";
+    renderProfileListingsTemplate(profile, container);
   } catch (error) {
     console.log("error");
   }

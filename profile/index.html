@@ -123,7 +123,7 @@
     <main class="w-100 pt-md-5">
       <article class="w-100 m-auto" style="max-width: 1100px">
         <div class="m-auto">
-          <div class="w-100 my-5 d-lg-flex flex-lg-wrap justify-content-between">
+          <div class="w-100 my-5 d-lg-flex flex-lg-wrap justify-content-around">
             <div id="profileContainer">
               <section class="m-auto mb-6" style="max-width: 475px">
                 <div class="mt-6 text-center">
@@ -145,24 +145,26 @@
                 </div>
               </section>
             </div>
-            <section class="m-auto mb-6 mb-lg-0 mt-lg-6" style="max-width: 475px; width: inherit">
+            <section class="m-auto m-lg-0 mb-6 mb-lg-0 mt-lg-6" style="max-width: 475px; width: inherit">
               <h3 class="fw-bold">My listings</h3>
-              <section class="shadow-lg rounded-4 m-auto my-4" style="max-width: 475px">
-                <div>
-                  <a href="/listing/index.html" class="text-decoration-none">
-                    <h2 class="px-4 pt-5 fst-italic fw-semibold">Giraffe painting</h2>
-                  </a>
-                </div>
-                <div class="ratio ratio-16x9 mt-3">
-                  <img src="/images/pexels-antony-trivet-6057741.jpg" alt="" class="img-fluid" />
-                </div>
-                <div class="p-4">
-                  <div class="d-flex justify-content-end gap-3">
-                    <i class="fa-solid fa-pen fs-4"></i>
-                    <i class="fa-solid fa-trash fs-4"></i>
+              <div id="listingsContainer">
+                <section class="shadow-lg rounded-4 m-auto my-4" style="max-width: 475px">
+                  <div>
+                    <a href="/listing/index.html" class="text-decoration-none">
+                      <h2 class="px-4 pt-5 fst-italic fw-semibold">Giraffe painting</h2>
+                    </a>
                   </div>
-                </div>
-              </section>
+                  <div class="ratio ratio-16x9 mt-3">
+                    <img src="/images/pexels-antony-trivet-6057741.jpg" alt="" class="img-fluid" />
+                  </div>
+                  <div class="p-4">
+                    <div class="d-flex justify-content-end gap-3">
+                      <i class="fa-solid fa-pen fs-4"></i>
+                      <i class="fa-solid fa-trash fs-4"></i>
+                    </div>
+                  </div>
+                </section>
+              </div>
             </section>
           </div>
         </div>

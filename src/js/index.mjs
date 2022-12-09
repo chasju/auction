@@ -35,6 +35,7 @@ if (path === "/profile/user/" || path === "/profile/user/index.html") {
 if (path === "/profile/" || path === "/profile/index.html") {
   listeners.setMenuListener();
   listeners.setProfileListener();
+  listeners.setProfileListingsListener();
 }
 
 // if (load("token") !== null || load("token") !== undefined) {
