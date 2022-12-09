@@ -27,6 +27,11 @@ if (path === "/listing/" || path === "/listing/index.html") {
   listeners.getSinglePost();
   listeners.getBids();
 }
+if (path === "/profile/user/" || path === "/profile/user/index.html") {
+  listeners.setMenuListener();
+  listeners.setGetProfileListener();
+  listeners.setGetProfileListingsListener();
+}
 
 // if (load("token") !== null || load("token") !== undefined) {
 //   console.log(`Logged in`);

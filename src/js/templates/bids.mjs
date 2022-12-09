@@ -9,6 +9,7 @@
 export function bidsTemplate(postData) {
   const post = document.createElement("div");
   post.classList.add("post", "mx-2");
+  postData.reverse();
 
   if (postData.length === 0) {
     post.innerHTML += `<div class="mt-4 d-flex justify-content-between">
