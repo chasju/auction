@@ -8,3 +8,4 @@ export * from "./userListing.mjs";
 export * from "./createPost.mjs";
 export * from "./updatePost.mjs";
 export * from "./userProfile.mjs";
+export * from "./profile.mjs";
