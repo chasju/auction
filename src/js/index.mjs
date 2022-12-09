@@ -32,6 +32,15 @@ if (path === "/profile/user/" || path === "/profile/user/index.html") {
   listeners.setGetProfileListener();
   listeners.setGetProfileListingsListener();
 }
+if (path === "/profile/" || path === "/profile/index.html") {
+  listeners.setMenuListener();
+  listeners.setProfileListener();
+  listeners.setProfileListingsListener();
+}
+if (path === "/profile/update/" || path === "/profile/update/index.html") {
+  listeners.setMenuListener();
+  listeners.updateProfileListener();
+}
 
 // if (load("token") !== null || load("token") !== undefined) {
 //   console.log(`Logged in`);
