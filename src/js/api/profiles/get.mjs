@@ -9,7 +9,7 @@ export async function getUserProfile(name) {
 }
 
 export async function getUserListings(name) {
-  const getPostsURL = `${baseURL}/profiles/${name}/listings`;
+  const getPostsURL = `${baseURL}/profiles/${name}/listings?_seller=true&_bids=true&sort=created&sortOrder=desc`;
   const response = await authFetch(getPostsURL);
   const listings = await response.json();
   return listings;

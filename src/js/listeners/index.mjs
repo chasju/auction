@@ -7,3 +7,4 @@ export * from "./search.mjs";
 export * from "./userListing.mjs";
 export * from "./createPost.mjs";
 export * from "./updatePost.mjs";
+export * from "./userProfile.mjs";
