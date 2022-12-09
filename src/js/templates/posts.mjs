@@ -23,6 +23,7 @@ export function postTemplate(postData) {
     let media = postData[i].media[0];
     let endsAt = postData[i].endsAt;
     let sellerImage = seller.avatar;
+    bids.reverse();
 
     // Determine media undefined
 

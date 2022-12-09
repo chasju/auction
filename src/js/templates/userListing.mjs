@@ -16,6 +16,7 @@ export function userListingTemplate(postData) {
     const { title, description, bids } = userPost;
     let media = userPost.media[0];
     let endsAt = userPost.endsAt;
+    bids.reverse();
 
     // Determine media undefined
 
