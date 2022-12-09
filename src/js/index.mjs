@@ -37,6 +37,10 @@ if (path === "/profile/" || path === "/profile/index.html") {
   listeners.setProfileListener();
   listeners.setProfileListingsListener();
 }
+if (path === "/profile/update/" || path === "/profile/update/index.html") {
+  listeners.setMenuListener();
+  listeners.updateProfileListener();
+}
 
 // if (load("token") !== null || load("token") !== undefined) {
 //   console.log(`Logged in`);
