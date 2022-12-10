@@ -61,7 +61,7 @@ export function postTemplate(postData) {
 
     // Post template
 
-    post.innerHTML += `<section class="w-100 flex-grow-1 shadow-lg rounded-4 m-auto mb-6" style="max-width: 475px">
+    post.innerHTML += `<section class="w-100 flex-grow-1 shadow-lg rounded-4 m-auto mb-6 overflow-hidden" style="max-width: 475px">
                 <div>
                   <a href="./listing/?id=${id}" class="text-decoration-none">
                     <h2 class="px-4 pt-5 fst-italic fw-semibold">${title}</h2>

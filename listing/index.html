@@ -64,13 +64,13 @@
         <div class="w-100 logo d-flex flex-column d-md-none mt-5 px-3">
           <a href="./../" class="align-self-center"><i class="fa-solid fa-gavel text-secondary fs-1"></i> </a>
           <div class="d-flex position-relative">
-            <div class="d-block">
+            <div id="frontLoggedIn" class="d-none">
               <div class="m-auto ratio ratio-1x1" style="width: 50px">
-                <img src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
+                <img id="frontImage" src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
               </div>
               <div class="cookies d-flex align-items-baseline gap-1">
                 <i class="fa-solid fa-cookie"></i>
-                <p class="mb-0">1000</p>
+                <p id="frontCookies" class="mb-0">1000</p>
               </div>
             </div>
             <div id="hamburger" class="hamburger d-flex gap-2 ms-auto" style="height: 50px; z-index: 10">
@@ -94,20 +94,24 @@
               </div>
             </div>
           </div>
-          <div class="d-none flex-grow-1 align-items-center" id="logged-in-nav">
+          <div class="d-flex flex-grow-1 align-items-center" id="logged-in-nav">
             <div class="login register ms-auto px-4 d-flex gap-5">
-              <div class="d-flex flex-row-reverse gap-3">
-                <div class="m-auto ratio ratio-1x1" style="width: 25px">
-                  <img src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
-                </div>
-                <div class="cookies d-flex align-items-center gap-1">
-                  <i class="fa-solid fa-cookie"></i>
-                  <p class="mb-0">1000</p>
-                </div>
+              <div>
+                <a id="loggedInProfile" class="d-flex flex-row-reverse gap-3 text-decoration-none">
+                  <div class="m-auto ratio ratio-1x1" style="width: 25px">
+                    <img id="imgLoggedIn" src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
+                  </div>
+                  <div class="cookies d-flex align-items-center gap-1">
+                    <i class="fa-solid fa-cookie"></i>
+                    <p id="cookiesLoggedIn" class="mb-0">1000</p>
+                  </div>
+                </a>
               </div>
               <div class="d-flex gap-2 justify-content-center align-items-center">
-                <i class="fa-solid fa-plus"></i>
-                <p class="fw-bold fst-italic text-success d-inline m-auto">Add listing</p>
+                <a href="./../listing/create/" class="text-decoration-none d-flex gap-2 justify-content-center align-items-center">
+                  <i class="fa-solid fa-plus"></i>
+                  <p class="fw-bold fst-italic text-success d-inline m-auto">Add listing</p>
+                </a>
               </div>
               <div class="d-flex gap-2 justify-content-center align-items-center">
                 <i class="fa-solid fa-right-to-bracket"></i>
