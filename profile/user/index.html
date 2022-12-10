@@ -17,65 +17,63 @@
   </head>
   <body class="w-100">
     <nav class="navbar navbar-expand justify-content-center justify-content-md-start" aria-label="Navbar">
+      <div id="menu" class="position-absolute top-0 w-100 d-md-none" style="height: 90vh; display: none; z-index: 1">
+        <section class="bg-body shadow-lg rounded-1 m-auto pb-7 pt-6 h-100">
+          <div class="menu-nav d-flex container">
+            <div class="d-block p-2">
+              <a id="navProfile" class="text-decoration-none">
+                <div class="m-auto ratio ratio-1x1" style="width: 50px">
+                  <img id="navProfileImage" src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
+                </div>
+                <div class="cookies d-flex align-items-baseline gap-1">
+                  <i class="fa-solid fa-cookie"></i>
+                  <p id="navCookies" class="mb-0">1000</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="w-75 m-auto p-3 mt-6 d-flex flex-wrap gap-4 justify-content-center align-items-center" style="max-width: 250px">
+            <a href="./../../login/" class="text-decoration-none text-success">
+              <div class="p-3 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
+                <i class="fa-solid fa-right-to-bracket fs-7"></i>
+                <p class="mb-0 mt-2 fst-italic fw-semibold">Login</p>
+              </div>
+            </a>
+            <a id="profileLink" href="./profile/" class="text-decoration-none text-success">
+              <div class="p-3 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
+                <i class="fa-solid fa-user fs-7"></i>
+                <p class="mb-0 mt-2 fst-italic fw-semibold">Profile</p>
+              </div>
+            </a>
+            <a href="./../../listing/create/" class="text-decoration-none text-success">
+              <div class="p-3 4 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
+                <i class="fa-solid fa-plus fs-7"></i>
+                <p class="mb-0 mt-2 fst-italic fw-semibold">Add</p>
+              </div>
+            </a>
+            <a id="logout" href="./../../" class="text-decoration-none text-success">
+              <div class="p-3 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
+                <i class="fa-solid fa-right-from-bracket fs-7"></i>
+                <p class="mb-0 mt-2 fst-italic fw-semibold">Logout</p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
       <div class="container justify-content-center">
         <div class="w-100 logo d-flex flex-column d-md-none mt-5 px-3">
-          <a href="/index.html" class="align-self-center"><i class="fa-solid fa-gavel text-secondary fs-1"></i> </a>
+          <a href="./../../" class="align-self-center"><i class="fa-solid fa-gavel text-secondary fs-1"></i> </a>
           <div class="d-flex position-relative">
-            <div id="menu" class="position-absolute end-5 top-0" style="display: none; z-index: 1; width: calc(100% + 2px)">
-              <section class="bg-body shadow-lg rounded-1 m-auto pb-7">
-                <div class="menu-nav d-flex">
-                  <div class="d-none p-2">
-                    <div class="m-auto ratio ratio-1x1" style="width: 50px">
-                      <img src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
-                    </div>
-                    <div class="cookies d-flex align-items-baseline gap-1">
-                      <i class="fa-solid fa-cookie"></i>
-                      <p class="mb-0">1000</p>
-                    </div>
-                  </div>
-                  <div id="inside-hamburger" class="hamburger d-flex gap-2 ms-auto p-2" style="height: 50px">
-                    <div class="first-dot"></div>
-                    <div class="second-dot"></div>
-                  </div>
-                </div>
-                <div class="w-75 m-auto p-3 mt-6 d-flex flex-wrap gap-4 justify-content-center align-items-center" style="max-width: 250px">
-                  <a href="./login/" class="text-decoration-none text-success">
-                    <div class="p-3 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
-                      <i class="fa-solid fa-right-to-bracket fs-7"></i>
-                      <p class="mb-0 mt-2 fst-italic fw-semibold">Login</p>
-                    </div>
-                  </a>
-                  <a href="./profile/" class="text-decoration-none text-success">
-                    <div class="p-3 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
-                      <i class="fa-solid fa-user fs-7"></i>
-                      <p class="mb-0 mt-2 fst-italic fw-semibold">Profile</p>
-                    </div>
-                  </a>
-                  <a href="./listing/create/" class="text-decoration-none text-success">
-                    <div class="p-3 4 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
-                      <i class="fa-solid fa-plus fs-7"></i>
-                      <p class="mb-0 mt-2 fst-italic fw-semibold">Add</p>
-                    </div>
-                  </a>
-                  <a id="logout" href="./../" class="text-decoration-none text-success">
-                    <div class="p-3 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
-                      <i class="fa-solid fa-right-from-bracket fs-7"></i>
-                      <p class="mb-0 mt-2 fst-italic fw-semibold">Logout</p>
-                    </div>
-                  </a>
-                </div>
-              </section>
-            </div>
-            <div class="d-none">
+            <div id="frontLoggedIn" class="d-none">
               <div class="m-auto ratio ratio-1x1" style="width: 50px">
-                <img src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
+                <img id="frontImage" src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
               </div>
               <div class="cookies d-flex align-items-baseline gap-1">
                 <i class="fa-solid fa-cookie"></i>
-                <p class="mb-0">1000</p>
+                <p id="frontCookies" class="mb-0">1000</p>
               </div>
             </div>
-            <div id="hamburger" class="hamburger d-flex gap-2 ms-auto" style="height: 50px">
+            <div id="hamburger" class="hamburger d-flex gap-2 ms-auto" style="height: 50px; z-index: 10">
               <div class="first-dot"></div>
               <div class="second-dot"></div>
             </div>
@@ -98,22 +96,26 @@
           </div>
           <div class="d-none flex-grow-1 align-items-center" id="logged-in-nav">
             <div class="login register ms-auto px-4 d-flex gap-5">
-              <div class="d-flex flex-row-reverse gap-3">
-                <div class="m-auto ratio ratio-1x1" style="width: 25px">
-                  <img src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
-                </div>
-                <div class="cookies d-flex align-items-center gap-1">
-                  <i class="fa-solid fa-cookie"></i>
-                  <p class="mb-0">1000</p>
-                </div>
+              <div>
+                <a id="loggedInProfile" class="d-flex flex-row-reverse gap-3 text-decoration-none">
+                  <div class="m-auto ratio ratio-1x1" style="width: 25px">
+                    <img id="imgLoggedIn" src="/images/1d2b425751dd1ea6e61766da2f5358a5.jpg" alt="profile" class="rounded-circle" style="object-fit: cover" />
+                  </div>
+                  <div class="cookies d-flex align-items-center gap-1">
+                    <i class="fa-solid fa-cookie"></i>
+                    <p id="cookiesLoggedIn" class="mb-0">1000</p>
+                  </div>
+                </a>
               </div>
-              <div class="d-flex gap-2 justify-content-center align-items-center">
-                <i class="fa-solid fa-plus"></i>
-                <p class="fw-bold fst-italic text-success d-inline m-auto">Add listing</p>
+              <div>
+                <a href="./../../listing/create/" class="text-decoration-none d-flex gap-2 justify-content-center align-items-center">
+                  <i class="fa-solid fa-plus"></i>
+                  <p class="fw-bold fst-italic text-success d-inline m-auto">Add listing</p>
+                </a>
               </div>
               <div class="d-flex gap-2 justify-content-center align-items-center">
                 <i class="fa-solid fa-right-to-bracket"></i>
-                <p class="fw-bold fst-italic text-success d-inline m-auto">Logout</p>
+                <p class="fw-bold fst-italic text-success d-inline m-auto logout">Logout</p>
               </div>
             </div>
           </div>
@@ -128,6 +130,21 @@
             <span class="bg-primary input-group-text"><i class="fa-solid fa-magnifying-glass text-white p-1 fs-1"></i></span>
           </div>
         </form>
+      </div>
+      <div id="redirectMessage" class="container mt-5 d-none" style="max-width: 480px">
+        <section>
+          <div class="w-75 bg-secondary m-auto rounded-2 px-4 py-5 text-white d-flex flex-column gap-5">
+            <p class="fst-italic">You must be logged in to access this page</p>
+            <a href="./../../login/" class="text-white"
+              ><p class="mb-0 text-white fst-italic">Please login</p>
+              <p class="text-white fst-italic">here >></p></a
+            >
+            <a href="./../../register/" class="text-white"
+              ><p class="mb-0 text-white fst-italic">Or register</p>
+              <p class="text-white fst-italic">here >></p></a
+            >
+          </div>
+        </section>
       </div>
       <article class="w-100 m-auto" style="max-width: 1100px">
         <div class="m-auto">

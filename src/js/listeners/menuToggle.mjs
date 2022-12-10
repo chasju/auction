@@ -1,16 +1,31 @@
+import { getUserProfile } from "../api/profiles/get.mjs";
+import { load } from "../storage/load.mjs";
+
 export function setMenuListener() {
   const burgerOpen = document.querySelector("#hamburger");
-  const burgerClose = document.querySelector("#inside-hamburger");
 
-  burgerOpen.addEventListener("click", () => {
+  burgerOpen.addEventListener("click", async () => {
     const menu = document.querySelector("#menu");
 
-    menu.classList.add("d-block");
-  });
+    menu.classList.toggle("d-block");
 
-  burgerClose.addEventListener("click", () => {
-    const menu = document.querySelector("#menu");
+    const isLoggedIn = load("profile");
+    const navProfile = document.querySelector("#navProfile");
+    const profileImage = document.querySelector("#navProfileImage");
+    const cookies = document.querySelector("#navCookies");
 
-    menu.classList.remove("d-block");
+    if (isLoggedIn) {
+      const userProfile = await getUserProfile(isLoggedIn.name);
+      const profileLink = document.querySelector("#profileLink");
+
+      profileImage.src = userProfile.avatar;
+      cookies.innerText = userProfile.credits;
+
+      profileLink.href = `/profile/?name=${userProfile.name}`;
+      navProfile.href = `/profile/?name=${userProfile.name}`;
+    } else {
+      navProfile.classList.remove("d-block");
+      navProfile.classList.add("d-none");
+    }
   });
 }

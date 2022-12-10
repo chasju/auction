@@ -31,7 +31,7 @@ export function profileListingsTemplate(postData) {
                   </div>
                   <div class="p-4">
                     <div class="d-flex justify-content-end gap-3">
-                      <a href="listings/update/?id=${id}"><i class="fa-solid fa-pen fs-4"></i></a>
+                      <a href="./../listing/update/?id=${id}"><i class="fa-solid fa-pen fs-4"></i></a>
                       <i id="deletePost" class="fa-solid fa-trash fs-4"></i>
                     </div>
                   </div>
