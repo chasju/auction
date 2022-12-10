@@ -20,11 +20,13 @@ if (path === "/listing/create/" || path === "/listing/create/index.html") {
   listeners.setMenuListener();
   listeners.setCreatePostListener();
   view.loginCheck();
+  view.reDirect();
 }
 if (path === "/listing/update/" || path === "/listing/update/index.html") {
   listeners.setMenuListener();
   listeners.setUpdatePostListener();
   view.loginCheck();
+  view.reDirect();
 }
 if (path === "/listing/" || path === "/listing/index.html") {
   listeners.setMenuListener();
@@ -37,21 +39,18 @@ if (path === "/profile/user/" || path === "/profile/user/index.html") {
   listeners.setGetProfileListener();
   listeners.setGetProfileListingsListener();
   view.loginCheck();
+  view.reDirect();
 }
 if (path === "/profile/" || path === "/profile/index.html") {
   listeners.setMenuListener();
   listeners.setProfileListener();
   listeners.setProfileListingsListener();
   view.loginCheck();
+  view.reDirect();
 }
 if (path === "/profile/update/" || path === "/profile/update/index.html") {
   listeners.setMenuListener();
   listeners.updateProfileListener();
   view.loginCheck();
+  view.reDirect();
 }
-
-// if (load("token") !== null || load("token") !== undefined) {
-//   console.log(`Logged in`);
-// } else {
-//   console.log(`Not logged in`);
-// }
