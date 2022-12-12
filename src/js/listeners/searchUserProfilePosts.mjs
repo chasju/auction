@@ -1,28 +1,32 @@
-import { getPosts } from "../api/posts/get.mjs";
-import { renderPostTemplate } from "../templates/index.mjs";
+import { getUserListings } from "../api/profiles/get.mjs";
+import { renderUserProfileListingsTemplate } from "../templates/index.mjs";
 
 /**
  * Function that will search through Home feed posts.
  *
  * @returns const filterPosts will return posts that include input value.
- * If there are no posts matching
- * filterPosts will return all posts.
+ * If there are no posts matching filterPosts will return UI message
+ * If no input filterPosts will return all posts.
  * @example
  * ```js
  
  * ```
  */
 
-export async function searchHomeFeedPosts() {
+const url = new URL(location.href);
+const userName = url.searchParams.get("name");
+
+export async function searchProfilePosts() {
   try {
-    const posts = await getPosts();
+    const posts = await getUserListings(userName);
+
     const searchInput = document.querySelector("#searchHomePage");
     const searchForm = document.querySelector("#searchForm");
-    const container = document.querySelector("#container");
+    const container = document.querySelector("#listingContainer");
 
     searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const filterPosts = posts.filter((post) => {
+      let filterPosts = posts.filter((post) => {
         const title = post.title.toLowerCase();
 
         const searchValue = searchInput.value.toLowerCase();
@@ -38,10 +42,10 @@ export async function searchHomeFeedPosts() {
                             for what you are searching for</p></div>`;
       }
 
-      renderPostTemplate(filterPosts, container);
+      renderUserProfileListingsTemplate(filterPosts, container);
     });
   } catch (error) {
-    const container = document.querySelector("#container");
+    const container = document.querySelector("#listingContainer");
 
     container.innerHTML = "There was an error searching the feed" + error;
     console.log(error);
