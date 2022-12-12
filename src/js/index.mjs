@@ -38,6 +38,7 @@ if (path === "/profile/user/" || path === "/profile/user/index.html") {
   listeners.setMenuListener();
   listeners.setGetProfileListener();
   listeners.setGetProfileListingsListener();
+  listeners.searchProfilePosts();
   view.loginCheck();
   view.reDirect();
 }
