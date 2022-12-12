@@ -1,5 +1,7 @@
 import { getUserProfile } from "../api/profiles/get.mjs";
 import { updateProfile } from "../api/profiles/update.mjs";
+import { load } from "../storage/load.mjs";
+import { save } from "../storage/save.mjs";
 
 export async function updateProfileListener() {
   const url = new URL(location.href);
@@ -19,6 +21,9 @@ export async function updateProfileListener() {
       const formData = new FormData(form);
       const avatar = Object.fromEntries(formData.entries());
       avatar.name = name;
+      let profileExists = load("profile");
+      profileExists["avatar"] = avatar.avatar;
+      save("profile", profileExists);
       await updateProfile(avatar);
       window.location.reload();
     });
