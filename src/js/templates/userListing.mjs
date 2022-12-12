@@ -6,6 +6,8 @@
  * @returns The function returns the post template and is being used in the renderUserListingTemplate function.
  */
 
+import { checkBidButton } from "../components/bidButton.mjs";
+
 export function userListingTemplate(postData) {
   const post = document.createElement("div");
   post.classList.add("post", "w-100", "my-5", "d-lg-flex", "flex-lg-wrap", "justify-content-between");
@@ -98,7 +100,7 @@ export function userListingTemplate(postData) {
                 </div>
               </div>
               <div class="px-4">
-                <button class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center">Place bid</button>
+                <button class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center bidButton">Place bid</button>
               </div>
             </div>
           </section>
@@ -119,4 +121,5 @@ export function userListingTemplate(postData) {
 
 export function renderUserListingTemplate(postData, parent) {
   parent.append(userListingTemplate(postData));
+  checkBidButton();
 }

@@ -6,6 +6,7 @@
  * @returns The function returns the post template and is being used in the renderPostTemplate function.
  */
 
+import { checkBidButton } from "../components/bidButton.mjs";
 import { formatDate } from "../components/formatDate.mjs";
 
 export function postTemplate(postData) {
@@ -95,7 +96,7 @@ export function postTemplate(postData) {
                     </div>
                   </div>
                   <div class="px-4">
-                    <button class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center">Place bid</button>
+                    <button class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center bidButton">Place bid</button>
                   </div>
                   <div class="px-4 py-4 d-flex gap-2 justify-content-end">
                     <a href="./profile/user/?name=${seller.name}">
@@ -123,4 +124,6 @@ export function postTemplate(postData) {
 
 export function renderPostTemplate(postData, parent) {
   parent.append(postTemplate(postData));
+
+  checkBidButton();
 }

@@ -8,6 +8,8 @@ export async function loginCheck() {
     const loggedInNav = document.querySelector("#logged-in-nav");
     const notLoggedInNav = document.querySelector("#not-logged-in-nav");
     const frontLoggedIn = document.querySelector("#frontLoggedIn");
+    const logout = document.querySelector("#logout");
+    const profileLink = document.querySelector("#profileLink");
 
     notLoggedInNav.classList.remove("d-flex");
     notLoggedInNav.classList.add("d-none");
@@ -17,6 +19,12 @@ export async function loginCheck() {
 
     frontLoggedIn.classList.remove("d-none");
     frontLoggedIn.classList.add("d-block");
+
+    logout.classList.remove("d-none");
+    logout.classList.add("d-block");
+
+    profileLink.classList.remove("d-none");
+    profileLink.classList.add("d-block");
   }
 
   // Display correct information
@@ -26,6 +34,7 @@ export async function loginCheck() {
     const loggedInProfile = document.querySelector("#loggedInProfile");
     const imgLoggedIn = document.querySelector("#imgLoggedIn");
     const cookiesLoggedIn = document.querySelector("#cookiesLoggedIn");
+    const frontLoggedInLink = document.querySelector("#frontLoggedInLink");
     const frontImage = document.querySelector("#frontImage");
     const frontCookies = document.querySelector("#frontCookies");
 
@@ -34,5 +43,6 @@ export async function loginCheck() {
     cookiesLoggedIn.innerText = profile.credits;
     frontImage.src = profile.avatar;
     frontCookies.innerText = profile.credits;
+    frontLoggedInLink.href = `/profile/?name=${profile.name}`;
   }
 }

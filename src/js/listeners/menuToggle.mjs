@@ -8,6 +8,7 @@ export function setMenuListener() {
     const menu = document.querySelector("#menu");
 
     menu.classList.toggle("d-block");
+    burgerOpen.classList.toggle("open");
 
     const isLoggedIn = load("profile");
     const navProfile = document.querySelector("#navProfile");
