@@ -7,6 +7,7 @@
  */
 
 import { checkBidButton } from "../components/bidButton.mjs";
+import { makeBidListener } from "../listeners/makeBid.mjs";
 
 export function userListingTemplate(postData) {
   const post = document.createElement("div");
@@ -93,10 +94,13 @@ export function userListingTemplate(postData) {
                   </div>
                 </div>
               </div>
+              <div class="px-4 d-flex justify-content-end align-items-center">
+                  <p id="errorMessage" class="d-none bg-danger text-white p-2 rounded-1">Error</p>
+                </div>
               <div class="px-4 d-flex gap-2 justify-content-end align-items-center">
                 <div class="cookies d-flex align-items-baseline gap-1">
                   <i class="fa-solid fa-cookie-bite"></i>
-                  <input type="number" name="bid" id="bidInput" placeholder="0" style="width: 60px" class="text-end px-2 py-1" />
+                  <input type="number" name="amount" id="bidInput" placeholder="0" style="width: 60px" class="text-end px-2 py-1" />
                 </div>
               </div>
               <div class="px-4">
@@ -122,4 +126,5 @@ export function userListingTemplate(postData) {
 export function renderUserListingTemplate(postData, parent) {
   parent.append(userListingTemplate(postData));
   checkBidButton();
+  makeBidListener();
 }
