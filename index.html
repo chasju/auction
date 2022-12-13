@@ -139,16 +139,12 @@
           </div>
           <div class="w-100 my-5 d-lg-flex flex-lg-wrap justify-content-between">
             <div class="w-75 m-auto px-3 d-flex justify-content-end position-relative">
-              <p class="fst-italic">Sort by</p>
-              <div class="d-none position-absolute end-0 top-35 bg-body shadow-lg rounded-3 overflow-scroll overflow-hidden" style="z-index: 1; width: 180px; height: 270px">
+              <p id="sortButton" class="fst-italic" role="button">Sort by</p>
+              <div id="openSort" class="d-none position-absolute end-0 top-35 bg-body shadow-lg rounded-3 overflow-scroll overflow-hidden" style="z-index: 1; width: 180px; height: 270px">
                 <section class="m-auto p-3 text-center text-success">
                   <p class="fw-semibold">Tags</p>
                   <hr />
-                  <div id="tags" class="fst-italic">
-                    <p>Giraffe</p>
-                    <p>Pencils</p>
-                    <p>Coffee</p>
-                  </div>
+                  <div id="tags" class="fst-italic"></div>
                 </section>
               </div>
             </div>
