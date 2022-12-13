@@ -1,4 +1,5 @@
 import { getBids, getSinglePost } from "../../../listeners/userListing.mjs";
+import { loginCheck } from "../../../views/isLoggedIn.mjs";
 import { baseURL } from "../../apiBase.mjs";
 import { authFetch } from "../../headers.mjs";
 
@@ -39,6 +40,7 @@ export async function sendBid(postData) {
       errorMessage.classList.add("d-none");
       await getSinglePost(id);
       await getBids();
+      await loginCheck();
       const post = await response.json();
       return post;
     }
