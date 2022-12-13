@@ -21,6 +21,8 @@ export async function getSinglePost() {
     container.innerHTML = "";
     renderUserListingTemplate(post, container);
   } catch (error) {
+    const container = document.querySelector("#container");
+
     console.log(error);
     container.innerHTML = "<div><p>There was an error loading the content<p></div>" + error;
   }
@@ -36,6 +38,8 @@ export async function getBids() {
     container.innerHTML = "";
     renderBidsTemplate(bids, container);
   } catch (error) {
+    const container = document.querySelector("#container");
+
     console.log(error);
     container.innerHTML = "<div><p>There was an error loading the content<p></div>" + error;
   }

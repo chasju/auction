@@ -89,14 +89,10 @@ export function postTemplate(postData) {
                       </div>
                     </div>
                   </div>
-                  <div class="px-4 d-flex gap-2 justify-content-end align-items-center">
-                    <div class="cookies d-flex align-items-baseline gap-1">
-                      <i class="fa-solid fa-cookie-bite"></i>
-                      <input type="number" name="bid" id="bidInput" placeholder="0" style="width: 60px" class="text-end px-2 py-1" />
-                    </div>
-                  </div>
                   <div class="px-4">
-                    <button class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center bidButton">Place bid</button>
+                  <a href="./listing/?id=${id}" class="text-decoration-none">
+                   <button class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center bidButton">Make a bid</button>
+                  </a>
                   </div>
                   <div class="px-4 py-4 d-flex gap-2 justify-content-end">
                     <a href="./profile/user/?name=${seller.name}">
