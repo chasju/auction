@@ -67,12 +67,6 @@ export function userProfileListingsTemplate(postData) {
                       </div>
                     </div>
                   </div>
-                  <div class="px-4 d-flex gap-2 justify-content-end align-items-center">
-                    <div class="cookies d-flex align-items-baseline gap-1">
-                      <i class="fa-solid fa-cookie-bite"></i>
-                      <input type="number" name="bid" id="bidInput" placeholder="0" style="width: 60px" class="text-end px-2 py-1" />
-                    </div>
-                  </div>
                   <div class="px-4 pb-5">
                     <button class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center">Place bid</button>
                   </div>

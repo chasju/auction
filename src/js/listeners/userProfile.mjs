@@ -8,6 +8,8 @@ const userName = url.searchParams.get("name");
 export async function setGetProfileListener() {
   try {
     const profile = await getUserProfile(userName);
+    document.title = `${profile.name}'s listings | find.no`;
+
     const container = document.querySelector("#profileContainer");
     container.innerHTML = "";
     renderUserProfileTemplate(profile, container);
