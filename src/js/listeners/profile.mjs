@@ -8,6 +8,7 @@ const userName = url.searchParams.get("name");
 export async function setProfileListener() {
   try {
     const profile = await getUserProfile(userName);
+    document.title = `${profile.name}'s profile page | find.no`;
 
     const container = document.querySelector("#profileContainer");
     container.innerHTML = "";
@@ -22,8 +23,14 @@ export async function setProfileListingsListener() {
     const profile = await getUserListings(userName);
 
     const container = document.querySelector("#listingsContainer");
-    container.innerHTML = "";
-    renderProfileListingsTemplate(profile, container);
+    if (profile.length > 0) {
+      container.innerHTML = "";
+      renderProfileListingsTemplate(profile, container);
+    } else {
+      container.innerHTML = `<div class="bg-primary p-2 mt-5 m-auto rounded-1 text-center" style="max-width: 475px">
+                      <p class="text-white fw-semibold mb-0">No posts yet</p>
+                    </div>`;
+    }
   } catch (error) {
     console.log("error");
   }
