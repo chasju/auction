@@ -1,5 +1,6 @@
 import * as listeners from "./listeners/index.mjs";
 import * as view from "./views/index.mjs";
+import * as components from "./components/index.mjs";
 
 const path = location.pathname;
 
@@ -9,6 +10,8 @@ if (path === "/" || path === "/index.html") {
   listeners.getHomeFeedPosts();
   listeners.searchHomeFeedPosts();
   view.loginCheck();
+  components.sortTags();
+  listeners.sortBy();
 }
 if (path === "/register/" || path === "/register/index.html") {
   listeners.setRegisterFormListener();

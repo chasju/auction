@@ -142,13 +142,16 @@
               <p id="sortButton" class="fst-italic" role="button">Sort by</p>
               <div id="openSort" class="d-none position-absolute end-0 top-35 bg-body shadow-lg rounded-3 overflow-scroll overflow-hidden" style="z-index: 1; width: 180px; height: 270px">
                 <section class="m-auto p-3 text-center text-success">
-                  <p class="fw-semibold">Tags</p>
+                  <div class="d-flex justify-content-center position-relative align-items-center">
+                    <p class="fw-semibold mb-0">Tags</p>
+                    <i id="allTags" role="button" class="fa-solid fa-xmark position-absolute end-0"></i>
+                  </div>
                   <hr />
                   <div id="tags" class="fst-italic"></div>
                 </section>
               </div>
             </div>
-            <div id="container">
+            <div id="container" class="w-100">
               <section class="shadow-lg rounded-4 m-auto mb-6" style="max-width: 475px">
                 <div>
                   <a href="./listing/" class="text-decoration-none">
