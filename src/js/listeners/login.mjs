@@ -12,7 +12,6 @@ export function setLoginListener() {
       const { email, password } = profile;
 
       await login(email, password);
-      window.location = "./../";
     });
   }
 }

@@ -35,8 +35,13 @@ export async function login(email, password) {
     body: JSON.stringify({ email, password }),
   });
 
-  const result = await response.json();
+  if (response.ok) {
+    const result = await response.json();
 
-  storage.save("token", result.accessToken);
-  storage.save("profile", result);
+    storage.save("token", result.accessToken);
+    storage.save("profile", result);
+    window.location = "./../";
+  }
+  const errorMessage = document.querySelector("#errorMessage");
+  errorMessage.classList.remove("d-none");
 }

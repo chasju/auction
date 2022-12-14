@@ -14,7 +14,7 @@ export function userProfileTemplate(postData) {
   post.innerHTML += `<div class="ratio ratio-1x1" style="width: 50px">
               <img src="${isAvatar}" alt="profile" class="rounded-circle" style="object-fit: cover" />
             </div>
-            <h1 class="fw-bolder mb-0">${postData.name}'s listings</h1>`;
+            <h1 class="fw-bolder mb-0 fs-3">${postData.name}'s listings</h1>`;
   return post;
 }
 
