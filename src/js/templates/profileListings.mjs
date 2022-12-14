@@ -1,3 +1,5 @@
+import { deleteListing } from "../listeners/deletePost.mjs";
+
 export function profileListingsTemplate(postData) {
   const post = document.createElement("div");
   post.classList.add("post", "m-auto", "d-lg-flex", "flex-lg-wrap", "justify-content-between");
@@ -32,7 +34,7 @@ export function profileListingsTemplate(postData) {
                   <div class="p-4">
                     <div class="d-flex justify-content-end gap-3">
                       <a href="./../listing/update/?id=${id}"><i class="fa-solid fa-pen fs-4"></i></a>
-                      <i id="deletePost" class="fa-solid fa-trash fs-4"></i>
+                      <i id="${id}" class="fa-solid fa-trash fs-4 deletePost"></i>
                     </div>
                   </div>
                 </section>`;
@@ -43,4 +45,5 @@ export function profileListingsTemplate(postData) {
 
 export function renderProfileListingsTemplate(postData, parent) {
   parent.append(profileListingsTemplate(postData));
+  deleteListing();
 }
