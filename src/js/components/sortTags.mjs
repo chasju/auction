@@ -9,11 +9,11 @@ export async function sortTags() {
       if (tags[i] === "") {
         continue;
       }
-      tagsArray.push(tags[i].trim());
+      tagsArray.push(tags[i].trim().toLowerCase());
     }
   });
-
-  const sortedArray = sortTagDesc(tagsArray);
+  let uniqueItems = [...new Set(tagsArray)];
+  const sortedArray = sortTagDesc(uniqueItems);
 
   return sortedArray;
 }
