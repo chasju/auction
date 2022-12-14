@@ -148,15 +148,15 @@
                   <h1 class="fw-bolder">EDIT PROFILE</h1>
                 </div>
                 <div class="mt-6 d-flex flex-column gap-3 align-items-center gap-2">
-                  <div class="ratio ratio-1x1 placeholder-glow" style="width: 10rem">
-                    <img id="profileImage" src="/images/placeholder.png" alt="profile" class="rounded-circle placeholder" style="object-fit: cover" />
+                  <div class="ratio ratio-1x1" style="width: 10rem">
+                    <img id="profileImage" src="/images/placeholder.png" alt="profile" class="rounded-circle" style="object-fit: cover" />
                   </div>
                 </div>
               </div>
               <div id="update" class="w-75 m-auto mt-4" style="max-width: 500px">
                 <form id="editProfile" type="submit">
                   <div class="shadow-lg rounded-3">
-                    <input name="avatar" class="form-control fst-italic border-0 p-3" type="url" placeholder="https://image.co/image.png" aria-label="update image with url" />
+                    <input name="avatar" class="form-control fst-italic border-0 p-3" type="url" placeholder="https://image.co/image.png" aria-label="update image with url" required />
                   </div>
                   <button class="w-100 mt-3 btn btn-lg fw-light btn-secondary align-self-center">Update image</button>
                 </form>
