@@ -73,8 +73,22 @@ export function userListingTemplate(postData) {
             <div class="mt-6">
               <h1 class="fw-bolder">${title}</h1>
             </div>
-            <div class="ratio ratio-16x9 mt-3">
-              <img src="${isMedia}" alt="" class="img-fluid" />
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="ratio ratio-16x9 mt-3 carousel-inner">
+                <div class="carousel-item active ratio ratio-16x9">
+                  <img src="${isMedia}" alt="" class="img-fluid d-block" style="object-fit: cover;"/>
+                </div>
+                <div class="carousel-extra">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
             <div>
               <div class="px-4 mt-3 d-flex justify-content-end gap-2">
@@ -127,4 +141,18 @@ export function renderUserListingTemplate(postData, parent) {
   parent.append(userListingTemplate(postData));
   checkBidButton();
   makeBidListener();
+  imageCarousel(postData);
+}
+
+// Handle more images in carousel
+
+async function imageCarousel(postData) {
+  const carousel = document.querySelector(".carousel-extra");
+  const images = postData[0].media;
+  images.forEach((image) => {
+    carousel.innerHTML = "";
+    carousel.innerHTML += `<div class="carousel-item ratio ratio-16x9">
+                  <img src="${image}" alt="" class="img-fluid" style="object-fit: cover"/>
+                </div>`;
+  });
 }
