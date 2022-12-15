@@ -34,7 +34,6 @@ export async function sendBid(postData) {
       body: JSON.stringify(postData),
     });
     const errorMessage = document.querySelector("#errorMessage");
-    console.log(response);
 
     if (response.ok) {
       errorMessage.classList.add("d-none");

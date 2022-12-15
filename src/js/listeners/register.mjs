@@ -2,7 +2,7 @@ import { register } from "../api/auth/register.mjs";
 import { login } from "../api/auth/login.mjs";
 
 /**
- * Function that will register user.
+ * Function that will register user and then login.
  *
  */
 
@@ -21,9 +21,8 @@ export function setRegisterFormListener() {
 
       try {
         await login(email, password);
-        window.location = "./../";
       } catch (error) {
-        console.log(error);
+        return alert("There was a problem logging into your new account");
       }
     });
   }

@@ -30,12 +30,14 @@ export async function register(profile) {
     method: "POST",
     body: JSON.stringify(profile),
   });
-
-  console.log(await response.json());
+  const result = await response.json();
 
   if (response.ok) {
-    return await response.json();
+    return result;
   }
 
-  throw new Error(response.statusText);
+  if (result.errors[0].message === "Profile already exists") {
+    const container = document.querySelector("#errorMessage");
+    container.classList.remove("d-none");
+  }
 }
