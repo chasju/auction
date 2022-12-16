@@ -29,7 +29,7 @@ export function profileListingsTemplate(postData) {
                     </a>
                   </div>
                   <div class="ratio ratio-16x9 mt-3">
-                    <img src="${isMedia}" alt="" class="img-fluid" style="object-fit: cover"/>
+                    <img src="${isMedia}" alt="Image for post titled ${title}" class="img-fluid" style="object-fit: cover"/>
                   </div>
                   <div class="p-4">
                     <div class="d-flex justify-content-end gap-3">

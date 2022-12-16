@@ -47,7 +47,7 @@ export function userProfileListingsTemplate(postData) {
                   </a>
                 </div>
                 <div class="ratio ratio-16x9 mt-3">
-                  <img src="${isMedia}" alt="" class="img-fluid" />
+                  <img src="${isMedia}" alt="Image for post titled ${title}" class="img-fluid" />
                 </div>
                 <div>
                   <div class="px-4 mt-3 d-flex justify-content-end gap-2">

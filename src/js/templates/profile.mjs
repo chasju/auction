@@ -25,7 +25,7 @@ export function profileTemplate(postData) {
                 </div>
                 <div class="mt-6 d-flex flex-column gap-3 align-items-center gap-2 position-relative">
                   <div class="ratio ratio-1x1" style="width: 10rem">
-                    <img src="${isAvatar}" alt="profile" class="rounded-circle" style="object-fit: cover" />
+                    <img src="${isAvatar}" alt="profile picture" class="rounded-circle" style="object-fit: cover" />
                     <a href="./update/?name=${name}"><i class="fa-solid fa-pen fs-4 text-success"></i></a>
                   </div>
                   <div class="mt-4 cookies d-flex gap-2 align-items-center gap-1">
