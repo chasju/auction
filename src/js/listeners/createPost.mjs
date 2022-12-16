@@ -43,7 +43,7 @@ export async function setCreatePostListener() {
     const description = document.querySelector("#previewDescription");
     let image = document.querySelector("#previewImage");
     const deadline = document.querySelector("#previewTimer");
-    const addInputButtons = document.querySelectorAll(".addInput");
+    const addInputButtons = document.querySelector(".addInput");
 
     form.addEventListener("change", (e) => {
       e.preventDefault();
@@ -61,18 +61,18 @@ export async function setCreatePostListener() {
       }
     });
 
-    addInputButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const div = document.createElement("div");
-        const insertHere = document.querySelector("#deadlineDiv");
-        div.classList.add("form-floating", "mt-4", "input-group");
+    // Setting extra image input
 
-        div.innerHTML = `<input type="url" name="media" class="form-control form-control-auth" id="image" placeholder="Image https://img.service.com/avatar.jpg"  />
+    addInputButtons.addEventListener("click", () => {
+      const div = document.createElement("div");
+      const insertHere = document.querySelector("#deadlineDiv");
+      div.classList.add("form-floating", "mt-4", "input-group");
+
+      div.innerHTML = `<input type="url" name="media" class="form-control form-control-auth" id="image" placeholder="Image https://img.service.com/avatar.jpg"  />
                 <label for="image">Image <span class="fs-8 fst-italic">https://img.service.com/avatar.jpg</span></label>
                 `;
 
-        form.insertBefore(div, insertHere);
-      });
+      form.insertBefore(div, insertHere);
     });
   }
 }
