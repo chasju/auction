@@ -51,7 +51,7 @@
                 <p class="mb-0 mt-2 fst-italic fw-semibold">Add</p>
               </div>
             </a>
-            <a id="logout" href="./" class="text-decoration-none text-success d-none logout">
+            <a id="logout" href="./" role="button" class="text-decoration-none text-success d-none logout">
               <div class="p-3 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
                 <i class="fa-solid fa-right-from-bracket fs-7"></i>
                 <p class="mb-0 mt-2 fst-italic fw-semibold">Logout</p>
@@ -114,7 +114,7 @@
                   <p class="fw-bold fst-italic text-success d-inline m-auto">Add listing</p>
                 </a>
               </div>
-              <div class="d-flex gap-2 justify-content-center align-items-center">
+              <div class="d-flex gap-2 justify-content-center align-items-center" role="button">
                 <i class="fa-solid fa-right-to-bracket"></i>
                 <p class="fw-bold fst-italic text-success d-inline m-auto logout">Logout</p>
               </div>
@@ -124,20 +124,25 @@
       </div>
     </nav>
     <main class="w-100 pt-md-5">
-      <div class="w-75 m-auto mt-6 search-bar shadow-lg rounded-3" style="max-width: 500px">
-        <form role="search" id="searchForm" type="submit">
-          <div class="input-group">
-            <input class="form-control search fst-italic border-0 p-3" id="searchHomePage" type="search" placeholder="Search" aria-label="Search" />
-            <span class="bg-primary input-group-text"><i class="fa-solid fa-magnifying-glass text-white p-1 fs-1"></i></span>
-          </div>
-        </form>
+      <div class="w-100 m-auto mt-2 px-4" style="max-width: 500px">
+        <div class="search-bar shadow-lg rounded-3">
+          <form role="search" id="searchForm" type="submit">
+            <div class="input-group">
+              <input class="form-control search fst-italic border-0 p-3" id="searchHomePage" type="search" placeholder="Search listings" aria-label="Search" />
+              <button class="btn bg-primary input-group-text"><i class="fa-solid fa-magnifying-glass text-white p-1 fs-1"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="searchInfo" class="w-75 m-auto mt-1 px-4 text-black-50 fst-italic d-none" style="max-width: 500px">
+        <p>2 results</p>
       </div>
       <article class="w-100 m-auto" style="max-width: 1100px">
         <div class="m-auto">
-          <div class="px-5 mt-6">
+          <div class="px-5 mt-4 pt-2">
             <h1 class="fw-bolder">NEW LISTINGS</h1>
           </div>
-          <div class="w-100 my-5 d-lg-flex flex-lg-wrap justify-content-between">
+          <div class="w-100 my-3 d-lg-flex flex-lg-wrap justify-content-between">
             <div class="w-75 m-auto px-3 d-flex justify-content-end position-relative">
               <p id="sortButton" class="fst-italic" role="button">Sort by</p>
               <div id="openSort" class="d-none position-absolute end-0 top-35 bg-body shadow-lg rounded-3 overflow-scroll overflow-hidden" style="z-index: 1; width: 180px; height: 270px">
@@ -228,7 +233,6 @@
               </section>
             </div>
           </div>
-          <button id="more" class="w-25 mb-6 d-block m-auto btn btn-sm fw-light btn-primary">More</button>
         </div>
       </article>
     </main>

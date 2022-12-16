@@ -70,7 +70,7 @@ export function userListingTemplate(postData) {
 
     post.innerHTML += `
           <section class="flex-grow-1 m-auto mb-6" style="max-width: 475px">
-            <div class="mt-6">
+            <div class="mt-6 ps-3">
               <h1 class="fw-bolder">${title}</h1>
             </div>
             <div id="carousel" class="carousel slide" data-bs-ride="carousel">
@@ -114,7 +114,7 @@ export function userListingTemplate(postData) {
               <div class="px-4 d-flex gap-2 justify-content-end align-items-center">
                 <div class="cookies d-flex align-items-baseline gap-1">
                   <i class="fa-solid fa-cookie-bite"></i>
-                  <input type="number" name="amount" id="bidInput" placeholder="0" style="width: 60px" class="text-end px-2 py-1" />
+                  <input type="number" aria-label="Input for bid amount" name="amount" id="bidInput" placeholder="0" style="width: 60px" class="text-end px-2 py-1" />
                 </div>
               </div>
               <div class="px-4">

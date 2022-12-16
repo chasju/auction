@@ -51,7 +51,7 @@
                 <p class="mb-0 mt-2 fst-italic fw-semibold">Add</p>
               </div>
             </a>
-            <a id="logout" href="./../../" class="text-decoration-none text-success d-none logout">
+            <a id="logout" href="./../../" class="text-decoration-none text-success d-none logout" role="button">
               <div class="p-3 shadow-lg rounded-2 d-flex flex-column justify-content-center align-items-center" style="width: 6rem; max-width: 100px">
                 <i class="fa-solid fa-right-from-bracket fs-7"></i>
                 <p class="mb-0 mt-2 fst-italic fw-semibold">Logout</p>
@@ -62,7 +62,7 @@
       </div>
       <div class="container justify-content-center">
         <div class="w-100 logo d-flex flex-column d-md-none mt-5 px-3">
-          <a href="./../../" class="align-self-center"><i class="fa-solid fa-gavel text-secondary fs-1"></i> </a>
+          <a href="./../../" aria-label="Homepage button" class="align-self-center"><i class="fa-solid fa-gavel text-secondary fs-1"></i> </a>
           <div class="d-flex position-relative">
             <a id="frontLoggedInLink" class="text-decoration-none">
               <div id="frontLoggedIn" class="d-none">
@@ -114,7 +114,7 @@
                   <p class="fw-bold fst-italic text-success d-inline m-auto">Add listing</p>
                 </a>
               </div>
-              <div class="d-flex gap-2 justify-content-center align-items-center">
+              <div class="d-flex gap-2 justify-content-center align-items-center" role="button">
                 <i class="fa-solid fa-right-to-bracket"></i>
                 <p class="fw-bold fst-italic text-success d-inline m-auto">Logout</p>
               </div>
@@ -162,7 +162,7 @@
               </div>
               <div class="form-floating mt-4 input-group">
                 <input type="url" name="media" class="form-control form-control-auth" id="image" placeholder="Image https://img.service.com/avatar.jpg" required />
-                <label for="image">Image <span class="fs-8 fst-italic">https://img.service.com/avatar.jpg</span></label>
+                <label for="image">Image <span class="fs-8 text-black-50 fst-italic">https://img.service.com/avatar.jpg</span></label>
                 <i class="fa-solid fa-plus align-self-center addInput"></i>
               </div>
               <div id="deadlineDiv" class="form-floating mt-4">

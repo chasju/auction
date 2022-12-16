@@ -11,7 +11,7 @@ import { formatDate } from "../components/formatDate.mjs";
 
 export function postTemplate(postData) {
   const post = document.createElement("div");
-  post.classList.add("post", "w-100", "my-5", "d-lg-flex", "flex-lg-wrap", "justify-content-between");
+  post.classList.add("post", "w-100", "my-2", "d-lg-flex", "flex-lg-wrap", "justify-content-between");
 
   for (let i = 0; i < postData.length; i++) {
     if (i >= 20) {
