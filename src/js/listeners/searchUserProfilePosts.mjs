@@ -23,6 +23,7 @@ export async function searchProfilePosts() {
     const searchInput = document.querySelector("#searchHomePage");
     const searchForm = document.querySelector("#searchForm");
     const container = document.querySelector("#listingContainer");
+    const resultContainer = document.querySelector("#searchInfo");
 
     searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -36,6 +37,14 @@ export async function searchProfilePosts() {
           return true;
         }
       });
+
+      if (searchInput.value) {
+        resultContainer.classList.remove("d-none");
+        resultContainer.classList.add("d-block");
+        resultContainer.innerText = `We found ${filterPosts.length} that matches '${searchInput.value}'`;
+      } else {
+        resultContainer.classList.add("d-none");
+      }
 
       if (filterPosts.length === 0) {
         container.innerHTML = `<div class="bg-secondary m-auto" style="max-width: 475px;"><p class="p-4 text-center text-white fw-semibold">No matches 
