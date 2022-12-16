@@ -19,13 +19,13 @@
     <nav class="navbar navbar-expand justify-content-center justify-content-md-start" aria-label="Navbar">
       <div class="container justify-content-center">
         <div class="logo d-flex d-md-none mt-5">
-          <a href="/index.html">
+          <a href="/index.html" aria-label="Homepage button">
             <i class="fa-solid fa-gavel text-secondary fs-1"></i>
           </a>
         </div>
         <div class="container-fluid d-none d-md-flex mt-2">
           <div class="w-25" style="max-width: 150px">
-            <a class="navbar-brand" href="/index.html"><img src="/images/logo-findDotNo.png" alt="Find.no logo" class="img-fluid" /></a>
+            <a class="navbar-brand" href="/index.html" aria-label="Homepage button"><img src="/images/logo-findDotNo.png" alt="Find.no logo" class="img-fluid" /></a>
           </div>
           <div class="collapse navbar-collapse" id="navbarsExample02">
             <div class="login register ms-auto px-4 d-flex gap-5">
@@ -45,8 +45,8 @@
       <article class="m-auto" style="max-width: 450px">
         <section>
           <div class="w-50 m-auto d-flex flex-column align-items-center">
-            <h1 class="mt-4 fst-italic text-primary">Welcome</h1>
-            <h2 class="fw-light text-primary">Register here</h2>
+            <h1 class="mt-4 fst-italic text-primary fw-bold">Welcome</h1>
+            <h2 class="text-primary">Register here</h2>
           </div>
           <div id="errorMessage" class="px-4 m-auto mt-3 bg-danger rounded-1 d-flex flex-column justify-content-center align-items-center d-none">
             <p class="bg-danger rounded-1 p-4 text-white p-2 mb-0">Profile already exists</p>
@@ -60,18 +60,18 @@
             </div>
             <div class="form-floating mt-4">
               <input type="email" name="email" class="form-control form-control-auth" id="email" placeholder="name@stud.noroff.no" required pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only @noroff.no and @stud.noroff.no domains are allowed to register a user." required />
-              <label for="email">Email</label>
+              <label for="email">Email <span class="ps-2 fst-italic text-black-50">example@noroff.no</span></label>
             </div>
             <div class="form-floating mt-4">
-              <input type="password" name="password" class="form-control form-control-auth" id="password" placeholder="Create a strong password" minlength="8" required />
+              <input type="password" name="password" class="form-control form-control-auth" id="password" placeholder="Create a strong password" minlength="8" title="Password must be at least 8 letters/numbers long and must not include special characters" required />
               <label for="password">Password</label>
             </div>
             <div class="form-floating mt-4">
               <input type="url" name="avatar" class="form-control form-control-auth" id="avatar" placeholder="https://img.service.com/avatar.jpg" title="Add your avatar url here" required />
-              <label for="avatar">Avatar</label>
+              <label for="avatar">Avatar <span class="ps-2 fst-italic text-black-50">Image url</span></label>
             </div>
             <button class="w-50 mt-5 btn btn-lg fw-med btn-secondary align-self-center">Register</button>
-            <a href="/login/" class="align-self-center mt-3">
+            <a href="/login/" class="align-self-center mt-3" aria-label="Link to login page">
               <p class="fst-italic text-center" style="width: 180px">Already registered? Login here >></p>
             </a>
           </form>
