@@ -14,7 +14,11 @@ export async function setGetProfileListener() {
     container.innerHTML = "";
     renderUserProfileTemplate(profile, container);
   } catch (error) {
-    console.log("error");
+    const container = document.querySelector("#profileContainer");
+    console.log(error);
+    container.innerHTML = `<div class="bg-primary p-4 mt-5 m-auto rounded-1 text-center" style="max-width: 475px">
+                <p class="text-white fw-semibold mb-0">There was an error loading the content. If the problem persist please contact us on +123456789</p>
+              </div>`;
   }
 }
 
@@ -26,6 +30,10 @@ export async function setGetProfileListingsListener() {
     container.innerHTML = "";
     renderUserProfileListingsTemplate(profile, container);
   } catch (error) {
-    console.log("error");
+    const container = document.querySelector("#profileContainer");
+    console.log(error);
+    container.innerHTML = `<div class="bg-primary p-4 mt-5 m-auto rounded-1 text-center" style="max-width: 475px">
+                <p class="text-white fw-semibold mb-0">There was an error loading the content. If the problem persist please contact us on +123456789</p>
+              </div>`;
   }
 }

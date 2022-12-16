@@ -51,8 +51,9 @@ export async function searchHomeFeedPosts() {
     });
   } catch (error) {
     const container = document.querySelector("#container");
-
-    container.innerHTML = "There was an error searching the feed" + error;
+    container.innerHTML = `<div class="bg-primary p-4 mt-5 m-auto rounded-1 text-center" style="max-width: 475px">
+                <p class="text-white fw-semibold mb-0">There was an error searching the listings. If the problem persist please contact us on +123456789</p>
+              </div>`;
     console.log(error);
   }
 }

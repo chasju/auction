@@ -1,4 +1,5 @@
 import { getPost } from "../api/posts/get.mjs";
+import { load } from "../storage/load.mjs";
 import { renderBidsTemplate } from "../templates/bids.mjs";
 import { renderUserListingTemplate } from "../templates/userListing.mjs";
 
@@ -24,7 +25,9 @@ export async function getSinglePost() {
     const container = document.querySelector("#container");
 
     console.log(error);
-    container.innerHTML = "<div><p>There was an error loading the content<p></div>" + error;
+    container.innerHTML = `<div class="bg-primary p-4 mt-5 m-auto rounded-1 text-center" style="max-width: 475px">
+                <p class="text-white fw-semibold mb-0">There was an error loading the content. If the problem persist please contact us on +123456789</p>
+              </div>`;
   }
 }
 
@@ -35,12 +38,21 @@ export async function getBids() {
 
     const container = document.querySelector("#bidContainer");
     document.title = `${posts.title} | Find.no`;
+    const isLoggedIn = load("profile");
+    const bidHeadline = document.querySelector("h3");
     container.innerHTML = "";
-    renderBidsTemplate(bids, container);
+    if (isLoggedIn) {
+      renderBidsTemplate(bids, container);
+    }
+    if (!isLoggedIn) {
+      bidHeadline.remove();
+    }
   } catch (error) {
     const container = document.querySelector("#container");
 
     console.log(error);
-    container.innerHTML = "<div><p>There was an error loading the content<p></div>" + error;
+    container.innerHTML = `<div class="bg-primary p-4 mt-5 m-auto rounded-1 text-center" style="max-width: 475px">
+                <p class="text-white fw-semibold mb-0">There was an error loading the content. If the problem persist please contact us on +123456789</p>
+              </div>`;
   }
 }
