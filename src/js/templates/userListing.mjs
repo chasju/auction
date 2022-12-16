@@ -76,7 +76,7 @@ export function userListingTemplate(postData) {
             <div id="carousel" class="carousel slide" data-bs-ride="carousel">
               <div class="ratio ratio-16x9 mt-3 carousel-inner">
                 <div class="carousel-item active ratio ratio-16x9">
-                  <img src="${isMedia}" alt="" class="img-fluid d-block" style="object-fit: cover;"/>
+                  <img src="${isMedia}" alt="Image for post titled ${title}" class="img-fluid d-block" style="object-fit: cover;"/>
                 </div>
                 <div class="carousel-extra">
                 </div>
@@ -152,7 +152,7 @@ async function imageCarousel(postData) {
   images.forEach((image) => {
     carousel.innerHTML = "";
     carousel.innerHTML += `<div class="carousel-item ratio ratio-16x9">
-                  <img src="${image}" alt="" class="img-fluid" style="object-fit: cover"/>
+                  <img src="${image}" alt="Image for post titled ${postData[0].title}" class="img-fluid" style="object-fit: cover"/>
                 </div>`;
   });
 }
