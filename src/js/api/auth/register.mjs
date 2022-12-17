@@ -35,9 +35,10 @@ export async function register(profile) {
   if (response.ok) {
     return result;
   }
-
-  if (result.errors[0].message === "Profile already exists") {
-    const container = document.querySelector("#errorMessage");
-    container.classList.remove("d-none");
+  if (!response.ok) {
+    if (result.errors[0].message === "Profile already exists") {
+      const container = document.querySelector("#errorMessage");
+      container.classList.remove("d-none");
+    }
   }
 }
