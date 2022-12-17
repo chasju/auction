@@ -3,6 +3,14 @@ import { sortTags } from "../components/sortTags.mjs";
 import { renderPostTemplate } from "../templates/posts.mjs";
 import { getHomeFeedPosts } from "./posts.mjs";
 
+/**
+ * Handles the Sort By button on homepage
+ * - Inserts sortTags() into a container
+ * - Toggles open/close on the sort menu on click
+ * - filter homepage listings when clicking a tag
+ * - brings back all posts if the 'x' is clicked
+ */
+
 export async function sortBy() {
   const button = document.querySelector("#sortButton");
   const openSort = document.querySelector("#openSort");

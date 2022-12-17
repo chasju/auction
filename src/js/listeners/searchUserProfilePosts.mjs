@@ -2,10 +2,10 @@ import { getUserListings } from "../api/profiles/get.mjs";
 import { renderUserProfileListingsTemplate } from "../templates/index.mjs";
 
 /**
- * Function that will search through Home feed posts.
+ * Function that will search through profile listings.
  *
  * @returns const filterPosts will return posts that include input value.
- * If there are no posts matching filterPosts will return UI message
+ * If there are no posts matching filterPosts will return UX message
  * If no input filterPosts will return all posts.
  * @example
  * ```js
@@ -56,7 +56,9 @@ export async function searchProfilePosts() {
   } catch (error) {
     const container = document.querySelector("#listingContainer");
 
-    container.innerHTML = "There was an error searching the feed" + error;
+    container.innerHTML = `<div class="bg-primary p-4 mt-5 m-auto rounded-1 text-center" style="max-width: 475px">
+                <p class="text-white fw-semibold mb-0">There was an error searching the listings. If the problem persist please contact us on +123456789</p>
+              </div>`;
     console.log(error);
   }
 }

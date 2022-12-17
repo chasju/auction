@@ -1,6 +1,11 @@
 import { baseURL } from "../apiBase.mjs";
 import { authFetch } from "../headers.mjs";
 
+/**
+ *
+ * @param {number} id This is the post id provided when using the function
+ */
+
 export async function deleteItem(id) {
   if (!id) {
     throw new Error("Delete requires post ID");
@@ -15,7 +20,10 @@ export async function deleteItem(id) {
   if (response.ok) {
     return response;
   }
-  const container = document.querySelector("#deleteProblem");
-  container.classList.remove("d-none");
-  container.classList.add("d-block");
+
+  if (!response.ok) {
+    const container = document.querySelector("#deleteProblem");
+    container.classList.remove("d-none");
+    container.classList.add("d-block");
+  }
 }

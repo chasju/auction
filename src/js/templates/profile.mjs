@@ -1,3 +1,9 @@
+/**
+ * Function will insert values from postData and is a template for how a profile should look like.
+ * @param {*} postData
+ * @returns
+ */
+
 export function profileTemplate(postData) {
   const post = document.createElement("div");
   post.classList.add("post", "m-auto", "d-flex", "gap-3", "align-items-center");
@@ -41,6 +47,12 @@ export function profileTemplate(postData) {
 
   return post;
 }
+
+/**
+ * Will render the profile template
+ * @param {*} postData
+ * @param {*} parent The parent container set when using the function
+ */
 
 export function renderProfileTemplate(postData, parent) {
   parent.append(profileTemplate(postData));

@@ -31,7 +31,7 @@ export function headers() {
  * @example
  * ```js
  * export async function getPost(id) {
-  const getPostURL = `${API_SOCIAL_URL}${action}/${id}?_author=true`;
+  const getPostURL = `example`;
   const response = await authFetch(getPostURL);
   const post = await response.json();
   console.log(post)

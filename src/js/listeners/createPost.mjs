@@ -30,8 +30,6 @@ export async function setCreatePostListener() {
 
       postData.media = mediaArray;
 
-      console.log(postData);
-
       await createPost(postData);
 
       window.location = "./../../";

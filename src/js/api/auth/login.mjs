@@ -42,6 +42,8 @@ export async function login(email, password) {
     storage.save("profile", result);
     window.location = "./../";
   }
-  const errorMessage = document.querySelector("#errorMessage");
-  errorMessage.classList.remove("d-none");
+  if (!response.ok) {
+    const errorMessage = document.querySelector("#errorMessage");
+    errorMessage.classList.remove("d-none");
+  }
 }

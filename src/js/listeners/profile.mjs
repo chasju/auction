@@ -5,6 +5,10 @@ import { renderProfileListingsTemplate } from "../templates/profileListings.mjs"
 const url = new URL(location.href);
 const userName = url.searchParams.get("name");
 
+/**
+ * Will show user information on profile page and update page title
+ */
+
 export async function setProfileListener() {
   try {
     const profile = await getUserProfile(userName);
@@ -17,6 +21,10 @@ export async function setProfileListener() {
     console.log("error");
   }
 }
+
+/**
+ * Will show user listings in profile page if there is any
+ */
 
 export async function setProfileListingsListener() {
   try {

@@ -1,3 +1,9 @@
+/**
+ * Formats date
+ * @param {*} date
+ * @returns 1d 12h 3m
+ */
+
 export function formatDate(date) {
   const todaysDate = new Date().getTime();
   const endDate = new Date(date).getTime();

@@ -3,8 +3,8 @@ import { baseURL } from "../apiBase.mjs";
 /**
  * Function will register user and send information to API 
  * 
- * @param {object} profile This is the input information provided in the register form and handled in /handlers/register.mjs
- * @returns returns result and sends the user to /pages/login/ so user can login and API information stored to localStorage
+ * @param {object} profile This is the input information provided in the register form
+ * @returns returns the API result
  * @example
  * ```js
  * if (form) {
@@ -35,9 +35,10 @@ export async function register(profile) {
   if (response.ok) {
     return result;
   }
-
-  if (result.errors[0].message === "Profile already exists") {
-    const container = document.querySelector("#errorMessage");
-    container.classList.remove("d-none");
+  if (!response.ok) {
+    if (result.errors[0].message === "Profile already exists") {
+      const container = document.querySelector("#errorMessage");
+      container.classList.remove("d-none");
+    }
   }
 }

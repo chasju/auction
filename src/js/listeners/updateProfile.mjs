@@ -3,6 +3,10 @@ import { updateProfile } from "../api/profiles/update.mjs";
 import { load } from "../storage/load.mjs";
 import { save } from "../storage/save.mjs";
 
+/**
+ * Updates profile image on submit if inputs are validated
+ */
+
 export async function updateProfileListener() {
   const url = new URL(location.href);
   const name = url.searchParams.get("name");
