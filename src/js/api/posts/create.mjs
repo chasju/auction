@@ -8,15 +8,14 @@ import { authFetch } from "../headers.mjs";
  * @returns returns the post
  * @example
  * ```js
- * button.addEventListener("click", (e) => {
-    e.preventDefault();
+ *  form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const postData = Object.fromEntries(formData.entries());
 
-    const bodyText = {
-      title: "No title",
-      body: input.value,
-    };
-    createPost(bodyText);
-  });
+      await createPost(postData);
+    });
   ```
  */
 
@@ -29,9 +28,13 @@ export async function createPost(postData) {
       body: JSON.stringify(postData),
     });
 
-    const post = await response.json();
-    return post;
+    if (response.ok) {
+      const post = await response.json();
+      return post;
+    }
   } catch (error) {
     console.log(error);
+    const errorMessage = document.querySelector("#errorMessage");
+    errorMessage.classList.remove("d-none");
   }
 }

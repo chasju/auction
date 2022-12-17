@@ -4,20 +4,18 @@ import { baseURL } from "../../apiBase.mjs";
 import { authFetch } from "../../headers.mjs";
 
 /**
- * Function will take in the postData provided from inputs.
+ * Function will take in the postData provided from bid input.
  * 
  * @param {object} postData This is the input information provided in an input
- * @returns returns the post
  * @example
  * ```js
- * button.addEventListener("click", (e) => {
+ *  button.addEventListener("click", async (e) => {
     e.preventDefault();
-
-    const bodyText = {
-      title: "No title",
-      body: input.value,
+    const bid = {
+      amount: Number(input.value),
     };
-    createPost(bodyText);
+
+    await sendBid(bid);
   });
   ```
  */

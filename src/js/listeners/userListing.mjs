@@ -31,6 +31,10 @@ export async function getSinglePost() {
   }
 }
 
+/**
+ * Gets the bids made on a single post if user is logged in
+ */
+
 export async function getBids() {
   try {
     const posts = await getPost(id);

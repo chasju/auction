@@ -1,6 +1,10 @@
 import { getUserProfile } from "../api/profiles/get.mjs";
 import { load } from "../storage/load.mjs";
 
+/**
+ * Conditions when a user is logged in or not
+ */
+
 export async function loginCheck() {
   const isLoggedIn = load("profile");
   if (isLoggedIn) {

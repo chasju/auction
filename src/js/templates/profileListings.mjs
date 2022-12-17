@@ -1,5 +1,11 @@
 import { deleteListing } from "../listeners/deletePost.mjs";
 
+/**
+ * Function will insert values from postData and is a template for how a profile should look like.
+ * @param {*} postData
+ * @returns
+ */
+
 export function profileListingsTemplate(postData) {
   const post = document.createElement("div");
   post.classList.add("post", "m-auto", "d-lg-flex", "flex-lg-wrap", "justify-content-between");
@@ -42,6 +48,12 @@ export function profileListingsTemplate(postData) {
 
   return post;
 }
+
+/**
+ * Will render the profile template
+ * @param {*} postData
+ * @param {*} parent The parent container set when using the function
+ */
 
 export function renderProfileListingsTemplate(postData, parent) {
   parent.append(profileListingsTemplate(postData));

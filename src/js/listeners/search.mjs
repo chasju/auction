@@ -5,12 +5,8 @@ import { renderPostTemplate } from "../templates/index.mjs";
  * Function that will search through Home feed posts.
  *
  * @returns const filterPosts will return posts that include input value.
- * If there are no posts matching
- * filterPosts will return all posts.
- * @example
- * ```js
- 
- * ```
+ * If there are no posts matching filterPosts will return UX message
+ * If no input filterPosts will return all posts.
  */
 
 export async function searchHomeFeedPosts() {

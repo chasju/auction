@@ -1,5 +1,12 @@
 import { getPosts } from "../api/posts/get.mjs";
 
+// Functions co-written with Eric Pretzinger
+
+/**
+ * Sorts tags for listings rendered and removes all duplicate tags
+ * @returns
+ */
+
 export async function sortTags() {
   const posts = await getPosts();
   let tagsArray = [];
@@ -17,6 +24,11 @@ export async function sortTags() {
 
   return sortedArray;
 }
+
+/**
+ * Sorts tags from A-Z for listings rendered
+ * @returns a sorted array
+ */
 
 export function sortTagDesc(array) {
   const sortedArray = array.sort(function (a, b) {

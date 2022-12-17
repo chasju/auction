@@ -1,5 +1,9 @@
 import { load } from "./../../js/storage/load.mjs";
 
+/**
+ * Display redirect message if user is not logged in
+ */
+
 export async function reDirect() {
   const isLoggedIn = load("profile");
   const redirectMessage = document.querySelector("#redirectMessage");

@@ -5,6 +5,10 @@ import { renderUserProfileListingsTemplate } from "../templates/userProfileListi
 const url = new URL(location.href);
 const userName = url.searchParams.get("name");
 
+/**
+ * Fetches the user profile information and updates page title
+ */
+
 export async function setGetProfileListener() {
   try {
     const profile = await getUserProfile(userName);
@@ -21,6 +25,10 @@ export async function setGetProfileListener() {
               </div>`;
   }
 }
+
+/**
+ * Fetches the user profile listings
+ */
 
 export async function setGetProfileListingsListener() {
   try {

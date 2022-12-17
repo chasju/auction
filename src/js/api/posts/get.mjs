@@ -1,6 +1,22 @@
 import { baseURL } from "../apiBase.mjs";
 import { authFetch } from "../headers.mjs";
 
+/**
+ * Function will get the 100 latest listings from the API
+ * @returns 100 listings
+ * @example 
+ * 
+ * export async function getHomeFeedPosts() {
+  try {
+    const post = await getPosts();
+
+   console.log(post)
+  } catch (error) {
+    console.log(error);
+  }
+}
+ */
+
 export async function getPosts() {
   const getPostsURL = `${baseURL}/listings?_seller=true&_bids=true&sort=created&sortOrder=desc`;
   const response = await authFetch(getPostsURL);
@@ -9,7 +25,7 @@ export async function getPosts() {
 }
 
 /**
- * Function will GET a single post based on ID provided.
+ * Function will GET a single listing based on ID provided.
  * 
  * @param {number} id This is the id information provided based on API post id
 

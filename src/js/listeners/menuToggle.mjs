@@ -1,6 +1,10 @@
 import { getUserProfile } from "../api/profiles/get.mjs";
 import { load } from "../storage/load.mjs";
 
+/**
+ * Opens/closes hamburger menu, and shows profile information if user is logged in
+ */
+
 export function setMenuListener() {
   const burgerOpen = document.querySelector("#hamburger");
 
