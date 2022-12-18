@@ -2,7 +2,7 @@
   "name": "auction",
   "description": "Noroff Semester Project 2",
   "type": "module",
-  "version": "0.2.10",
+  "version": "1.0.0",
   "main": "src/index.mjs",
   "devDependencies": {
     "@babel/core": "^7.19.3",
