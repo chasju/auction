@@ -20,10 +20,10 @@ $ git init
 $ npm i
 ```
 
-**Build SASS to see all css changes to project**
+**Build SASS when making changes to .scss files**
 
 ```
-$ npm run build when making changes to .scss files
+$ npm run build
 ```
 
 _See all scripts in package.json file, including what script to initialize for testing._
