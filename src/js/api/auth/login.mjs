@@ -40,7 +40,7 @@ export async function login(email, password) {
 
     storage.save("token", result.accessToken);
     storage.save("profile", result);
-    window.location = "./../";
+    return result;
   }
   if (!response.ok) {
     const errorMessage = document.querySelector("#errorMessage");

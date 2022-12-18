@@ -3,7 +3,7 @@
   "description": "Noroff Semester Project 2",
   "type": "module",
   "version": "0.2.9",
-  "main": "src/index.js",
+  "main": "src/index.mjs",
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.4",
@@ -47,6 +47,30 @@
     ],
     "*.scss": [
       "prettier --write"
+    ]
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "mjs",
+      "js",
+      "jsx",
+      "ts",
+      "tsx",
+      "json",
+      "node"
+    ],
+    "testMatch": [
+      "**/?(*.)test.?js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/cypress/"
+    ],
+    "transform": {
+      "^.+\\.m?js$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "\\.pnp\\.[^\\/]+$"
     ]
   }
 }

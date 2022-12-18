@@ -1,4 +1,5 @@
 import { login } from "../api/auth/login.mjs";
+import { load } from "../storage/load.mjs";
 
 export function setLoginListener() {
   const form = document.querySelector("#loginForm");
@@ -12,6 +13,10 @@ export function setLoginListener() {
       const { email, password } = profile;
 
       await login(email, password);
+      const storageProfile = load("profile");
+      if (email === storageProfile.email) {
+        window.location = "./../";
+      }
     });
   }
 }

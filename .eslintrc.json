@@ -6,11 +6,13 @@
     "extends": "eslint:recommended",
      "overrides": [
       {
-        "files": ["**/*.test.js"],
+        "files": ["**/*.test.mjs"],
         "env": { "jest": true },
         "plugins": ["jest"],
         "extends": ["plugin:jest/recommended"],
-        "rules": { "jest/prefer-expect-assertions": "off" }
+        "rules": { "jest/prefer-expect-assertions": "off",
+                "no-unused-vars": "off",
+                "no-undef": "off" }
       }
     ],
     "parserOptions": {
@@ -18,5 +20,7 @@
         "sourceType": "module"
     },
     "rules": {
+        "no-unused-vars": "warn",
+        "no-undef": "warn"
     }
 }
