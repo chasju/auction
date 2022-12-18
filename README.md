@@ -20,10 +20,10 @@ $ git init
 $ npm i
 ```
 
-**Build SASS to see all css changes to project**
+**Build SASS when making changes to .scss files**
 
 ```
-$ npm run build when making changes to .scss files
+$ npm run build
 ```
 
 _See all scripts in package.json file, including what script to initialize for testing._
@@ -31,3 +31,5 @@ _See all scripts in package.json file, including what script to initialize for t
 ## Additional info
 
 - Project includes jest and cypress for testing.
+- Project is built with Bootstrap v5.2
+- CDN link: "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
