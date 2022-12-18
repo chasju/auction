@@ -14,10 +14,6 @@ export function postTemplate(postData) {
   post.classList.add("post", "w-100", "my-2", "d-lg-flex", "flex-lg-wrap", "justify-content-between");
 
   for (let i = 0; i < postData.length; i++) {
-    if (i >= 20) {
-      break;
-    }
-
     // Destructuring API into variables
 
     const { title, description, seller, bids, id } = postData[i];
