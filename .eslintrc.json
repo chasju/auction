@@ -5,6 +5,16 @@
     },
     "extends": "eslint:recommended",
      "overrides": [
+        {
+      "files": ["**/*.cy.mjs"],
+      "env": { "cypress/globals": true },
+      "plugins": ["cypress"],
+      "extends": ["plugin:cypress/recommended"],
+      "rules": {
+        "cypress/no-unnecessary-waiting": "off",
+        "no-unused-vars": "off"
+      }
+    },
       {
         "files": ["**/*.test.mjs"],
         "env": { "jest": true },
